@@ -18,7 +18,7 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Golden Rose home">
+      <Link className="brand" href="/#top" aria-label="Golden Rose home">
         <span>
           <strong>Golden Rose</strong>
           <small>Agencia de Empleos NYC</small>
