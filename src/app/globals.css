@@ -893,6 +893,67 @@ form p {
   white-space: nowrap;
 }
 
+@supports (animation-timeline: view()) {
+  .page-hero,
+  .section-heading,
+  .split > *,
+  .preview-card,
+  .service-detail,
+  .image-panel,
+  .contact-card,
+  .contact-info-card,
+  .initiative-card,
+  .contact-rail {
+    animation: scroll-lift both;
+    animation-range: entry 8% cover 34%;
+    animation-timeline: view();
+    transform-origin: 50% 100%;
+  }
+
+  .stats-strip div {
+    animation: stat-lock both;
+    animation-range: entry 5% cover 42%;
+    animation-timeline: view();
+  }
+
+  .service-chip-list li {
+    animation: chip-slide both;
+    animation-range: entry 12% cover 28%;
+    animation-timeline: view();
+  }
+
+  .service-chip-list li:nth-child(3n + 2) {
+    animation-range: entry 18% cover 34%;
+  }
+
+  .service-chip-list li:nth-child(3n) {
+    animation-range: entry 24% cover 40%;
+  }
+
+  .page-hero h1,
+  .section h2 {
+    animation: headline-track both;
+    animation-range: entry 0% cover 40%;
+    animation-timeline: view();
+  }
+
+  .preview-card img,
+  .service-detail img,
+  .image-panel img {
+    animation:
+      image-drift 14s ease-in-out infinite alternate,
+      scroll-image-crop both;
+    animation-range: entry 0% cover 46%;
+    animation-timeline: auto, view();
+  }
+
+  .site-footer {
+    animation: footer-rise both;
+    animation-range: entry 0% cover 36%;
+    animation-timeline: view();
+  }
+}
+
 @keyframes header-current {
   0% {
     opacity: 0.25;
@@ -979,6 +1040,73 @@ form p {
   100% {
     opacity: 0.72;
     transform: translateX(145%) skewX(-12deg);
+  }
+}
+
+@keyframes scroll-lift {
+  0% {
+    opacity: 0.58;
+    transform: translateY(34px) rotateX(4deg);
+  }
+  62% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+@keyframes stat-lock {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(18px);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes chip-slide {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-16px) skewX(-6deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) skewX(0);
+  }
+}
+
+@keyframes headline-track {
+  0% {
+    letter-spacing: 0.08em;
+    opacity: 0.68;
+  }
+  100% {
+    letter-spacing: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-image-crop {
+  0% {
+    clip-path: inset(12% 0 12% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes footer-rise {
+  0% {
+    border-top-color: rgba(0, 131, 144, 0.2);
+    transform: translateY(34px);
+  }
+  100% {
+    border-top-color: var(--blue);
+    transform: translateY(0);
   }
 }
 
