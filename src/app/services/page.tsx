@@ -23,7 +23,7 @@ export default function ServicesPage() {
             />
             <div>
               <h2>{group.title}</h2>
-              <ul>
+              <ul className="service-chip-list">
                 {group.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

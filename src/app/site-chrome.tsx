@@ -85,13 +85,18 @@ export function SiteFooter() {
             Facebook
           </a>
           <a href="/contact">{copy.nav.contact}</a>
-          <a href="https://voltanyc.org/" rel="noreferrer" target="_blank">
-            {copy.footer.madeBy}
-          </a>
         </div>
       </div>
       <div className="footer-bottom">
         <span>{copy.footer.rights}</span>
+        <a
+          className="volta-credit"
+          href="https://voltanyc.org/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          {copy.footer.madeBy}
+        </a>
       </div>
     </footer>
   );

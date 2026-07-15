@@ -626,6 +626,26 @@ figcaption {
   padding: 0 12px 14px;
 }
 
+.service-chip-list {
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-chip-list li {
+  background: rgba(0, 131, 144, 0.16);
+  border: 1px solid rgba(0, 165, 181, 0.34);
+  color: #e4eeee;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 9px 11px;
+}
+
+.service-chip-list li::before {
+  display: none;
+}
+
 .image-panel {
   padding: 16px;
 }
@@ -717,13 +737,13 @@ form p {
   background: #050505;
   border-top: 8px solid var(--blue);
   display: block;
-  padding: clamp(36px, 6vw, 64px) clamp(18px, 5vw, 72px) 28px;
+  padding: clamp(56px, 8vw, 92px) clamp(18px, 5vw, 72px) 32px;
 }
 
 .footer-grid {
   display: grid;
-  gap: 24px;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: clamp(28px, 5vw, 56px);
+  grid-template-columns: 1.6fr repeat(3, 1fr);
   margin: 0 auto;
   max-width: 1180px;
 }
@@ -735,13 +755,15 @@ form p {
 
 .site-footer strong {
   color: var(--white);
+  font-size: 1.08rem;
   margin-bottom: 8px;
 }
 
 .site-footer a,
 .site-footer span {
   color: var(--muted);
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .site-footer a:hover {
@@ -749,10 +771,22 @@ form p {
 }
 
 .footer-bottom {
+  align-items: end;
   border-top: 1px solid var(--line);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
   margin: 36px auto 0;
   max-width: 1180px;
   padding-top: 18px;
+}
+
+.volta-credit {
+  color: var(--blue-light);
+  font-weight: 900;
+  text-align: right;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .language-overlay {

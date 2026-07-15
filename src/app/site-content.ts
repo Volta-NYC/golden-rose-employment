@@ -44,7 +44,7 @@ export const siteCopy = {
       ],
       introTitle: "A Brooklyn agency built on personal referrals.",
       introText:
-        "Golden Rose connects employers with reliable workers and helps applicants prepare for better opportunities. The new website keeps the direct, practical feel of the original site while making services easier to find.",
+        "Golden Rose connects employers with reliable workers and helps applicants prepare for better opportunities. Our team keeps the process direct, practical, and easy to understand.",
       cards: [
         {
           title: "Housekeeper Nannies",
@@ -79,8 +79,8 @@ export const siteCopy = {
     },
     services: {
       eyebrow: "Services",
-      title: "All staffing information from the original agency site.",
-      text: "Golden Rose supports domestic, restaurant, cleaning, construction, general labor, and related staffing needs.",
+      title: "Staffing referrals for homes, restaurants, and local businesses.",
+      text: "Golden Rose organizes each request by the kind of work, schedule, and experience needed so employers and applicants can move quickly.",
       groups: [
         {
           title: "Housekeeper Nannies",
@@ -124,7 +124,7 @@ export const siteCopy = {
             "Personal assistants",
             "Construction work",
             "School cleaning",
-            "All your staffing needs",
+            "Additional staffing requests",
           ],
         },
       ],
@@ -186,7 +186,7 @@ export const siteCopy = {
       ],
       introTitle: "Una agencia de Brooklyn basada en referencias personales.",
       introText:
-        "Golden Rose conecta empleadores con trabajadores confiables y ayuda a solicitantes a prepararse para mejores oportunidades. El nuevo sitio mantiene el estilo directo del sitio original y organiza mejor los servicios.",
+        "Golden Rose conecta empleadores con trabajadores confiables y ayuda a solicitantes a prepararse para mejores oportunidades. Nuestro equipo mantiene el proceso directo, practico y facil de entender.",
       cards: [
         {
           title: "Housekeeper Nannies",
@@ -221,8 +221,8 @@ export const siteCopy = {
     },
     services: {
       eyebrow: "Servicios",
-      title: "Toda la informacion de servicios del sitio original.",
-      text: "Golden Rose apoya necesidades de personal domestico, restaurantes, limpieza, construccion, labor general y mas.",
+      title: "Referencias de personal para hogares, restaurantes y negocios.",
+      text: "Golden Rose organiza cada solicitud por tipo de trabajo, horario y experiencia para que empleadores y solicitantes puedan avanzar con claridad.",
       groups: [
         {
           title: "Housekeeper Nannies",
