@@ -61,6 +61,17 @@ main {
   z-index: 8;
 }
 
+.site-header::after {
+  animation: header-current 9s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+  bottom: -1px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 42%;
+}
+
 .hero {
   min-height: calc(100svh - 78px);
   padding: clamp(28px, 5vw, 58px) clamp(18px, 5vw, 72px);
@@ -75,7 +86,24 @@ main {
   position: relative;
 }
 
+.hero::before {
+  animation: tide-shift 16s ease-in-out infinite alternate;
+  background:
+    linear-gradient(115deg, transparent 0 34%, rgba(0, 165, 181, 0.14) 38%, transparent 44%),
+    repeating-linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.045) 0 1px,
+      transparent 1px 14px
+    );
+  content: "";
+  inset: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  position: absolute;
+}
+
 .hero::after {
+  animation: frame-breathe 11s ease-in-out infinite;
   border: 1px solid rgba(0, 165, 181, 0.45);
   content: "";
   inset: 86px clamp(18px, 5vw, 72px) 42px;
@@ -122,12 +150,21 @@ nav a {
   letter-spacing: 0.04em;
   padding: 9px 11px;
   text-transform: uppercase;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
 }
 
 nav a:hover,
 nav a.is-active {
   border-color: var(--blue-light);
   color: var(--blue-light);
+}
+
+nav a:hover {
+  transform: translateY(-1px);
 }
 
 nav a.is-active {
@@ -138,7 +175,9 @@ nav a.nav-cta {
   background: var(--blue);
   border-color: var(--blue);
   color: var(--white);
+  overflow: hidden;
   padding-inline: 16px;
+  position: relative;
 }
 
 nav a.nav-cta:hover,
@@ -146,6 +185,18 @@ nav a.nav-cta.is-active {
   background: var(--blue-light);
   border-color: var(--blue-light);
   color: var(--black-deep);
+}
+
+nav a.nav-cta::after,
+.button.primary::after,
+form button::after {
+  animation: cta-sweep 4.8s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-120%) skewX(-18deg);
 }
 
 .hero-grid,
@@ -252,7 +303,13 @@ form button,
   letter-spacing: 0.04em;
   min-height: 50px;
   padding: 0 18px;
+  position: relative;
   text-transform: uppercase;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease,
+    border-color 220ms ease;
 }
 
 .button.primary,
@@ -273,6 +330,7 @@ form button:hover,
 .language-actions button:hover {
   background: var(--blue-light);
   color: var(--black-deep);
+  transform: translateY(-2px);
 }
 
 .spanish-line {
@@ -298,6 +356,7 @@ figure,
   background: rgba(8, 8, 8, 0.82);
   border: 1px solid var(--line);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  position: relative;
 }
 
 .rose-card {
@@ -314,6 +373,7 @@ figure,
 }
 
 .rose-card::after {
+  animation: card-tide 8s ease-in-out infinite alternate;
   background: var(--blue);
   bottom: -64px;
   content: "";
@@ -323,6 +383,19 @@ figure,
   right: -42px;
   transform: skew(-18deg);
   width: 170px;
+}
+
+.rose-card::before,
+.service-card::before,
+.contact-card::before,
+.contact-info-card::before {
+  animation: angled-sheen 7.5s ease-in-out infinite;
+  background: linear-gradient(110deg, transparent 0 32%, rgba(0, 165, 181, 0.18) 43%, transparent 54%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-120%);
 }
 
 .rose-symbol {
@@ -375,6 +448,14 @@ figure,
   min-height: 110px;
   padding: 22px 28px;
   text-align: center;
+  transition:
+    background-color 220ms ease,
+    transform 220ms ease;
+}
+
+.stats-strip div:hover {
+  background: rgba(0, 131, 144, 0.14);
+  transform: translateY(-2px);
 }
 
 .stats-strip strong {
@@ -431,6 +512,7 @@ figure,
 figure,
 .contact-card,
 .contact-info-card {
+  overflow: hidden;
   padding: 28px;
 }
 
@@ -587,6 +669,7 @@ figcaption {
 .contact-rail {
   background: rgba(8, 8, 8, 0.82);
   border: 1px solid var(--line);
+  overflow: hidden;
 }
 
 .preview-card {
@@ -598,6 +681,7 @@ figcaption {
 .preview-card img,
 .service-detail img,
 .image-panel img {
+  animation: image-drift 14s ease-in-out infinite alternate;
   aspect-ratio: 16 / 10;
   display: block;
   object-fit: cover;
@@ -737,7 +821,23 @@ form p {
   background: #050505;
   border-top: 8px solid var(--blue);
   display: block;
+  overflow: hidden;
   padding: clamp(56px, 8vw, 92px) clamp(18px, 5vw, 72px) 32px;
+  position: relative;
+}
+
+.site-footer::before {
+  animation: footer-current 13s ease-in-out infinite alternate;
+  background:
+    radial-gradient(circle at center, rgba(0, 165, 181, 0.22), transparent 60%),
+    linear-gradient(90deg, transparent, rgba(0, 131, 144, 0.16), transparent);
+  content: "";
+  height: 220px;
+  left: -8%;
+  pointer-events: none;
+  position: absolute;
+  top: -120px;
+  width: 48%;
 }
 
 .footer-grid {
@@ -746,6 +846,8 @@ form p {
   grid-template-columns: 1.6fr repeat(3, 1fr);
   margin: 0 auto;
   max-width: 1180px;
+  position: relative;
+  z-index: 1;
 }
 
 .site-footer div {
@@ -779,6 +881,8 @@ form p {
   margin: 36px auto 0;
   max-width: 1180px;
   padding-top: 18px;
+  position: relative;
+  z-index: 1;
 }
 
 .volta-credit {
@@ -787,6 +891,106 @@ form p {
   text-align: right;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+@keyframes header-current {
+  0% {
+    opacity: 0.25;
+    transform: translateX(-20%);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.25;
+    transform: translateX(155%);
+  }
+}
+
+@keyframes tide-shift {
+  0% {
+    opacity: 0.42;
+    transform: translateX(-2%) scale(1);
+  }
+  100% {
+    opacity: 0.72;
+    transform: translateX(2%) scale(1.04);
+  }
+}
+
+@keyframes frame-breathe {
+  0%,
+  100% {
+    border-color: rgba(0, 165, 181, 0.28);
+    transform: scale(1);
+  }
+  50% {
+    border-color: rgba(0, 165, 181, 0.66);
+    transform: scale(0.992);
+  }
+}
+
+@keyframes cta-sweep {
+  0%,
+  54% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  78%,
+  100% {
+    transform: translateX(120%) skewX(-18deg);
+  }
+}
+
+@keyframes card-tide {
+  0% {
+    transform: translate(0, 0) skew(-18deg);
+  }
+  100% {
+    transform: translate(-18px, -12px) skew(-18deg);
+  }
+}
+
+@keyframes angled-sheen {
+  0%,
+  58% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes image-drift {
+  0% {
+    filter: saturate(0.94) contrast(1);
+    transform: scale(1.01) translateX(-0.6%);
+  }
+  100% {
+    filter: saturate(1.08) contrast(1.05);
+    transform: scale(1.045) translateX(0.8%);
+  }
+}
+
+@keyframes footer-current {
+  0% {
+    opacity: 0.34;
+    transform: translateX(0) skewX(-12deg);
+  }
+  100% {
+    opacity: 0.72;
+    transform: translateX(145%) skewX(-12deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 .language-overlay {
