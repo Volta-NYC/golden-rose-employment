@@ -786,12 +786,14 @@ form p {
 .site-footer {
   align-items: center;
   background:
-    linear-gradient(180deg, #160d10, #070405 52%),
+    radial-gradient(circle at 14% 8%, rgba(215, 168, 79, 0.22), transparent 24rem),
+    linear-gradient(135deg, rgba(125, 33, 56, 0.36), transparent 38%),
+    linear-gradient(180deg, #160d10, #070405 58%),
     var(--black-deep);
   border-top: 8px solid var(--blue);
   display: block;
   overflow: hidden;
-  padding: clamp(56px, 8vw, 92px) clamp(18px, 5vw, 72px) 32px;
+  padding: clamp(48px, 7vw, 76px) clamp(18px, 5vw, 72px) 28px;
   position: relative;
 }
 
@@ -811,17 +813,53 @@ form p {
 
 .footer-grid {
   display: grid;
-  gap: clamp(28px, 5vw, 56px);
-  grid-template-columns: 1.6fr repeat(3, 1fr);
+  gap: clamp(18px, 4vw, 36px);
+  grid-template-columns: minmax(300px, 1.45fr) repeat(3, minmax(150px, 0.7fr));
   margin: 0 auto;
   max-width: 1180px;
   position: relative;
   z-index: 1;
 }
 
-.site-footer div {
+.footer-brand,
+.footer-column {
+  background: rgba(7, 4, 5, 0.54);
+  border: 1px solid var(--line);
+  min-height: 188px;
+  padding: 24px;
+}
+
+.footer-brand {
+  align-items: start;
   display: grid;
-  gap: 4px;
+  gap: 20px;
+  grid-template-columns: 92px minmax(0, 1fr);
+}
+
+.footer-logo {
+  align-items: center;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(145deg, rgba(241, 207, 134, 0.94), rgba(215, 168, 79, 0.82)),
+    var(--blue);
+  border: 1px solid rgba(255, 248, 238, 0.35);
+  box-shadow:
+    inset 0 0 0 8px rgba(22, 13, 16, 0.12),
+    0 20px 48px rgba(0, 0, 0, 0.28);
+  color: var(--black-deep);
+  display: inline-flex;
+  font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  font-size: 2.1rem;
+  justify-content: center;
+  line-height: 1;
+  width: 92px;
+}
+
+.footer-brand div:not(.footer-logo),
+.footer-column {
+  display: grid;
+  gap: 5px;
 }
 
 .site-footer strong {
@@ -833,8 +871,8 @@ form p {
 .site-footer a,
 .site-footer span {
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.98rem;
+  line-height: 1.56;
 }
 
 .site-footer a:hover {
@@ -849,7 +887,7 @@ form p {
   justify-content: space-between;
   margin: 36px auto 0;
   max-width: 1180px;
-  padding-top: 18px;
+  padding-top: 16px;
   position: relative;
   z-index: 1;
 }
@@ -1116,5 +1154,13 @@ form p {
 
   .rose-card {
     min-height: auto;
+  }
+
+  .footer-brand {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    width: 82px;
   }
 }

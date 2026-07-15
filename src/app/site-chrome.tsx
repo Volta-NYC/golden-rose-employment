@@ -63,12 +63,17 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-grid">
-        <div>
-          <strong>Golden Rose Agencia de Empleos NYC</strong>
-          <span>{copy.footer.tagline}</span>
-          <span>{copy.footer.appointment}</span>
+        <div className="footer-brand">
+          <div className="footer-logo" aria-hidden="true">
+            GR
+          </div>
+          <div>
+            <strong>Golden Rose Agencia de Empleos NYC</strong>
+            <span>{copy.footer.tagline}</span>
+            <span>{copy.footer.appointment}</span>
+          </div>
         </div>
-        <div>
+        <div className="footer-column">
           <strong>Contact</strong>
           <a href="tel:+13473509660">(347) 350-9660</a>
           <a href="tel:+13477891185">(347) 789-1185</a>
@@ -76,13 +81,13 @@ export function SiteFooter() {
             WhatsApp
           </a>
         </div>
-        <div>
+        <div className="footer-column">
           <strong>Location</strong>
           <span>381 Troy Ave</span>
           <span>Brooklyn, NY 11213 US</span>
           <span>{copy.footer.hours}</span>
         </div>
-        <div>
+        <div className="footer-column">
           <strong>Social</strong>
           <a
             href="https://www.facebook.com/agenciadeempleosNyc"
