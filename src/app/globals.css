@@ -857,6 +857,33 @@ form p {
   white-space: nowrap;
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 720ms ease,
+    transform 720ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-chip-list li.reveal-on-scroll {
+  transform: translateY(14px);
+  transition-duration: 560ms;
+}
+
+.preview-card.reveal-on-scroll,
+.service-detail.reveal-on-scroll,
+.contact-card.reveal-on-scroll,
+.contact-info-card.reveal-on-scroll,
+.initiative-card.reveal-on-scroll {
+  transform: translateY(28px);
+  transition-duration: 820ms;
+}
+
 @supports (animation-timeline: view()) {
   .page-hero,
   .section-heading,

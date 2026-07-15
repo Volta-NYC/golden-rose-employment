@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LanguageProvider } from "./language-context";
+import { ScrollReveal } from "./scroll-reveal";
 import { SiteFooter, SiteHeader } from "./site-chrome";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body>
         <LanguageProvider>
           <SiteHeader />
+          <ScrollReveal />
           {children}
           <SiteFooter />
         </LanguageProvider>
