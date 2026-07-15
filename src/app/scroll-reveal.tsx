@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const revealSelector = [
   ".page-hero",
@@ -25,10 +26,19 @@ const revealSelector = [
 ].join(",");
 
 export function ScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll(revealSelector));
 
-    elements.forEach((element) => element.classList.add("reveal-on-scroll"));
+    elements.forEach((element, index) => {
+      element.classList.remove("is-visible");
+      element.classList.add("reveal-on-scroll");
+
+      if (element instanceof HTMLElement) {
+        element.style.setProperty("--reveal-delay", `${Math.min(index * 45, 360)}ms`);
+      }
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -48,7 +58,7 @@ export function ScrollReveal() {
     elements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return null;
 }
