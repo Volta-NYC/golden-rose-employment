@@ -117,16 +117,35 @@ nav {
 nav a {
   border: 1px solid transparent;
   color: var(--white);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  padding: 10px 12px;
+  padding: 9px 11px;
   text-transform: uppercase;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.is-active {
   border-color: var(--blue-light);
   color: var(--blue-light);
+}
+
+nav a.is-active {
+  background: rgba(0, 131, 144, 0.14);
+}
+
+nav a.nav-cta {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+  padding-inline: 16px;
+}
+
+nav a.nav-cta:hover,
+nav a.nav-cta.is-active {
+  background: var(--blue-light);
+  border-color: var(--blue-light);
+  color: var(--black-deep);
 }
 
 .hero-grid,
@@ -165,11 +184,11 @@ h1 {
   color: var(--white);
   font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
-  font-size: clamp(2.7rem, 6.8vw, 6.35rem);
+  font-size: clamp(2.25rem, 5.6vw, 5.1rem);
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 0.92;
-  margin-bottom: 28px;
+  line-height: 0.98;
+  margin-bottom: 22px;
   max-width: 880px;
   text-transform: uppercase;
 }
@@ -178,17 +197,17 @@ h2 {
   color: var(--white);
   font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
-  font-size: clamp(2rem, 4.3vw, 4.25rem);
+  font-size: clamp(1.55rem, 3.1vw, 3rem);
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 0.98;
-  margin-bottom: 20px;
+  line-height: 1.04;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
 h3 {
   color: var(--white);
-  font-size: 1.16rem;
+  font-size: 1.04rem;
   font-weight: 900;
   letter-spacing: 0.04em;
   line-height: 1.2;
@@ -203,14 +222,14 @@ h3 {
 figure blockquote,
 footer span {
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.72;
+  font-size: 0.96rem;
+  line-height: 1.62;
 }
 
 .lede {
   color: #e4eeee;
-  font-size: clamp(1.08rem, 2vw, 1.34rem);
-  max-width: 720px;
+  font-size: clamp(1rem, 1.55vw, 1.18rem);
+  max-width: 650px;
 }
 
 .hero-actions,
@@ -232,7 +251,7 @@ form button,
   justify-content: center;
   letter-spacing: 0.04em;
   min-height: 50px;
-  padding: 0 22px;
+  padding: 0 18px;
   text-transform: uppercase;
 }
 
@@ -283,9 +302,9 @@ figure,
 
 .rose-card {
   border-top: 8px solid var(--blue);
-  min-height: 290px;
+  min-height: 250px;
   overflow: hidden;
-  padding: 34px;
+  padding: 26px;
   position: relative;
 }
 
@@ -311,12 +330,12 @@ figure,
   background: var(--blue);
   color: white;
   display: inline-flex;
-  font-size: 2.1rem;
+  font-size: 1.65rem;
   font-weight: 900;
-  height: 108px;
+  height: 78px;
   justify-content: center;
-  margin-bottom: 30px;
-  width: 132px;
+  margin-bottom: 20px;
+  width: 104px;
 }
 
 .quick-contact {
@@ -349,8 +368,8 @@ figure,
 
 .stats-strip div {
   background: rgba(255, 255, 255, 0.04);
-  min-height: 132px;
-  padding: 28px;
+  min-height: 110px;
+  padding: 22px 28px;
 }
 
 .stats-strip strong {
@@ -358,7 +377,7 @@ figure,
   display: block;
   font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.9rem, 3.7vw, 3rem);
   line-height: 1;
 }
 
@@ -371,12 +390,12 @@ figure,
 }
 
 .section {
-  padding: clamp(72px, 10vw, 124px) clamp(18px, 5vw, 42px);
+  padding: clamp(56px, 8vw, 92px) clamp(18px, 5vw, 42px);
 }
 
 .compact-section {
   padding-bottom: clamp(42px, 7vw, 78px);
-  padding-top: clamp(42px, 7vw, 78px);
+  padding-top: clamp(36px, 6vw, 64px);
 }
 
 .split,
@@ -468,7 +487,7 @@ li::before {
   display: block;
   font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
-  font-size: 3rem;
+  font-size: 2.35rem;
   line-height: 1;
   margin-bottom: 24px;
 }
@@ -537,11 +556,11 @@ figcaption {
 .page-hero {
   margin: 0 auto;
   max-width: 1180px;
-  padding: clamp(70px, 11vw, 128px) clamp(18px, 5vw, 42px) clamp(36px, 6vw, 70px);
+  padding: clamp(54px, 8vw, 92px) clamp(18px, 5vw, 42px) clamp(30px, 5vw, 56px);
 }
 
 .page-hero h1 {
-  max-width: 980px;
+  max-width: 860px;
 }
 
 .preview-section {
@@ -592,7 +611,7 @@ figcaption {
 
 .service-detail {
   display: grid;
-  gap: 22px;
+  gap: 18px;
   grid-template-rows: auto 1fr;
   padding: 16px;
 }
@@ -749,7 +768,7 @@ form p {
 }
 
 .language-popup h2 {
-  font-size: clamp(2.25rem, 9vw, 4.5rem);
+  font-size: clamp(1.9rem, 7vw, 3.25rem);
 }
 
 .language-popup p {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "./language-context";
 
 const navItems = [
@@ -13,6 +14,7 @@ const navItems = [
 
 export function SiteHeader() {
   const { copy } = useLanguage();
+  const pathname = usePathname();
 
   return (
     <header className="site-header">
@@ -23,11 +25,26 @@ export function SiteHeader() {
         </span>
       </Link>
       <nav aria-label="Main navigation">
-        {navItems.map(([key, href]) => (
-          <Link href={href} key={key}>
-            {copy.nav[key]}
-          </Link>
-        ))}
+        {navItems.map(([key, href]) => {
+          const isActive = href === "/" ? pathname === "/" : pathname === href;
+          const isContact = key === "contact";
+
+          return (
+            <Link
+              aria-current={isActive ? "page" : undefined}
+              className={[
+                isActive ? "is-active" : "",
+                isContact ? "nav-cta" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              href={href}
+              key={key}
+            >
+              {copy.nav[key]}
+            </Link>
+          );
+        })}
       </nav>
     </header>
   );
