@@ -1,4 +1,5 @@
 import { ContactForm } from "./contact-form";
+import { LanguagePopup } from "./language-popup";
 
 const employerServices = [
   "Domestic worker referrals",
@@ -59,13 +60,13 @@ const stats = [
 export default function Home() {
   return (
     <main>
+      <LanguagePopup />
       <section className="hero" id="top">
         <div className="nav-shell">
           <a className="brand" href="#top" aria-label="Golden Rose home">
-            <span className="brand-mark">GR</span>
             <span>
               <strong>Golden Rose</strong>
-              <small>Employment Agency Inc.</small>
+              <small>Agencia de Empleos NYC</small>
             </span>
           </a>
           <nav aria-label="Main navigation">
@@ -78,8 +79,8 @@ export default function Home() {
 
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Licensed NYC employment referral agency</p>
-            <h1>Connecting New York employers with reliable workers.</h1>
+            <p className="eyebrow">Bienvenidos / Welcome</p>
+            <h1>Golden Rose Agencia de Empleos NYC</h1>
             <p className="lede">
               Since 2016, Golden Rose has helped Brooklyn employers, families,
               and job seekers move forward with professionalism, compassion, and
@@ -101,9 +102,9 @@ export default function Home() {
           <aside className="hero-panel" aria-label="Golden Rose highlights">
             <div className="rose-card">
               <span className="rose-symbol" aria-hidden="true">
-                GR
+                2016
               </span>
-              <h2>Warm referrals. Serious standards.</h2>
+              <h2>Call us now to make an appointment.</h2>
               <p>
                 Domestic, commercial, hospitality, labor, and community support
                 referrals for New York families and businesses.
