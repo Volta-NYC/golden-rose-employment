@@ -4,10 +4,10 @@ export const oldHeroImage =
   "https://img1.wsimg.com/isteam/stock/naxm9Al/:/rs=w:1920,h:1080,cg:true,m/cr=w:1920,h:1080,a:cc";
 
 export const placeholderImages = {
-  domestic: "https://placehold.co/900x620/008390/ffffff?text=Domestic+Care",
-  restaurant: "https://placehold.co/900x620/161616/ffffff?text=Restaurant+Staff",
-  labor: "https://placehold.co/900x620/005a64/ffffff?text=General+Labor",
-  community: "https://placehold.co/900x620/008390/ffffff?text=Community+Resource",
+  domestic: "https://placehold.co/900x620/d7a84f/160d10?text=Domestic+Care",
+  restaurant: "https://placehold.co/900x620/a83250/fff8ee?text=Restaurant+Staff",
+  labor: "https://placehold.co/900x620/7d2138/fff8ee?text=General+Labor",
+  community: "https://placehold.co/900x620/f1cf86/160d10?text=Community+Resource",
 };
 
 export const siteCopy = {
