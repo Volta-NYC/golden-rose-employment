@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent } from "react";
-import { Language } from "./language-popup";
+import { Language } from "./site-content";
 
 const formCopy = {
   en: {

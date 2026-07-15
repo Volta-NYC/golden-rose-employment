@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { LanguageProvider } from "./language-context";
+import { SiteFooter, SiteHeader } from "./site-chrome";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,7 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

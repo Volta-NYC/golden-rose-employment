@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-export type Language = "en" | "es";
+import { Language } from "./site-content";
 
 type LanguagePopupProps = {
   onChoose: (language: Language) => void;
