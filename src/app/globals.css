@@ -61,17 +61,6 @@ main {
   z-index: 8;
 }
 
-.site-header::after {
-  animation: header-current 9s ease-in-out infinite;
-  background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
-  bottom: -1px;
-  content: "";
-  height: 1px;
-  left: 0;
-  position: absolute;
-  width: 42%;
-}
-
 .hero {
   min-height: calc(100svh - 78px);
   padding: clamp(28px, 5vw, 58px) clamp(18px, 5vw, 72px);
@@ -87,14 +76,11 @@ main {
 }
 
 .hero::before {
-  animation: tide-shift 16s ease-in-out infinite alternate;
+  animation: field-drift 20s ease-in-out infinite alternate;
   background:
-    linear-gradient(115deg, transparent 0 34%, rgba(0, 165, 181, 0.14) 38%, transparent 44%),
-    repeating-linear-gradient(
-      100deg,
-      rgba(255, 255, 255, 0.045) 0 1px,
-      transparent 1px 14px
-    );
+    radial-gradient(circle at 20% 18%, rgba(0, 165, 181, 0.18), transparent 34%),
+    radial-gradient(circle at 88% 72%, rgba(0, 131, 144, 0.16), transparent 30%),
+    linear-gradient(135deg, transparent 0 42%, rgba(255, 255, 255, 0.035) 43%, transparent 46%);
   content: "";
   inset: 0;
   mix-blend-mode: screen;
@@ -103,7 +89,7 @@ main {
 }
 
 .hero::after {
-  animation: frame-breathe 11s ease-in-out infinite;
+  animation: frame-settle 14s ease-in-out infinite;
   border: 1px solid rgba(0, 165, 181, 0.45);
   content: "";
   inset: 86px clamp(18px, 5vw, 72px) 42px;
@@ -185,18 +171,6 @@ nav a.nav-cta.is-active {
   background: var(--blue-light);
   border-color: var(--blue-light);
   color: var(--black-deep);
-}
-
-nav a.nav-cta::after,
-.button.primary::after,
-form button::after {
-  animation: cta-sweep 4.8s cubic-bezier(0.7, 0, 0.3, 1) infinite;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-  transform: translateX(-120%) skewX(-18deg);
 }
 
 .hero-grid,
@@ -373,7 +347,7 @@ figure,
 }
 
 .rose-card::after {
-  animation: card-tide 8s ease-in-out infinite alternate;
+  animation: blue-block-settle 10s ease-in-out infinite alternate;
   background: var(--blue);
   bottom: -64px;
   content: "";
@@ -383,19 +357,6 @@ figure,
   right: -42px;
   transform: skew(-18deg);
   width: 170px;
-}
-
-.rose-card::before,
-.service-card::before,
-.contact-card::before,
-.contact-info-card::before {
-  animation: angled-sheen 7.5s ease-in-out infinite;
-  background: linear-gradient(110deg, transparent 0 32%, rgba(0, 165, 181, 0.18) 43%, transparent 54%);
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-  transform: translateX(-120%);
 }
 
 .rose-symbol {
@@ -681,7 +642,7 @@ figcaption {
 .preview-card img,
 .service-detail img,
 .image-panel img {
-  animation: image-drift 14s ease-in-out infinite alternate;
+  animation: image-breath 18s ease-in-out infinite alternate;
   aspect-ratio: 16 / 10;
   display: block;
   object-fit: cover;
@@ -827,7 +788,7 @@ form p {
 }
 
 .site-footer::before {
-  animation: footer-current 13s ease-in-out infinite alternate;
+  animation: footer-glow-settle 16s ease-in-out infinite alternate;
   background:
     radial-gradient(circle at center, rgba(0, 165, 181, 0.22), transparent 60%),
     linear-gradient(90deg, transparent, rgba(0, 131, 144, 0.16), transparent);
@@ -904,21 +865,21 @@ form p {
   .contact-info-card,
   .initiative-card,
   .contact-rail {
-    animation: scroll-lift both;
-    animation-range: entry 8% cover 34%;
+    animation: panel-arrive both;
+    animation-range: entry 12% cover 36%;
     animation-timeline: view();
     transform-origin: 50% 100%;
   }
 
   .stats-strip div {
-    animation: stat-lock both;
-    animation-range: entry 5% cover 42%;
+    animation: stat-rise both;
+    animation-range: entry 8% cover 34%;
     animation-timeline: view();
   }
 
   .service-chip-list li {
-    animation: chip-slide both;
-    animation-range: entry 12% cover 28%;
+    animation: chip-place both;
+    animation-range: entry 12% cover 30%;
     animation-timeline: view();
   }
 
@@ -932,8 +893,8 @@ form p {
 
   .page-hero h1,
   .section h2 {
-    animation: headline-track both;
-    animation-range: entry 0% cover 40%;
+    animation: heading-set both;
+    animation-range: entry 4% cover 34%;
     animation-timeline: view();
   }
 
@@ -941,168 +902,130 @@ form p {
   .service-detail img,
   .image-panel img {
     animation:
-      image-drift 14s ease-in-out infinite alternate,
-      scroll-image-crop both;
-    animation-range: entry 0% cover 46%;
+      image-breath 18s ease-in-out infinite alternate,
+      image-window both;
+    animation-range: entry 8% cover 42%;
     animation-timeline: auto, view();
   }
 
   .site-footer {
-    animation: footer-rise both;
+    animation: footer-arrive both;
     animation-range: entry 0% cover 36%;
     animation-timeline: view();
   }
 }
 
-@keyframes header-current {
+@keyframes field-drift {
   0% {
-    opacity: 0.25;
-    transform: translateX(-20%);
-  }
-  50% {
-    opacity: 0.9;
+    opacity: 0.46;
+    transform: translate3d(-1.5%, -0.5%, 0) scale(1);
   }
   100% {
-    opacity: 0.25;
-    transform: translateX(155%);
+    opacity: 0.68;
+    transform: translate3d(1.5%, 0.75%, 0) scale(1.025);
   }
 }
 
-@keyframes tide-shift {
-  0% {
-    opacity: 0.42;
-    transform: translateX(-2%) scale(1);
-  }
-  100% {
-    opacity: 0.72;
-    transform: translateX(2%) scale(1.04);
-  }
-}
-
-@keyframes frame-breathe {
+@keyframes frame-settle {
   0%,
   100% {
-    border-color: rgba(0, 165, 181, 0.28);
-    transform: scale(1);
+    border-color: rgba(0, 165, 181, 0.34);
+    transform: translateY(0);
   }
   50% {
-    border-color: rgba(0, 165, 181, 0.66);
-    transform: scale(0.992);
+    border-color: rgba(0, 165, 181, 0.58);
+    transform: translateY(4px);
   }
 }
 
-@keyframes cta-sweep {
-  0%,
-  54% {
-    transform: translateX(-120%) skewX(-18deg);
-  }
-  78%,
-  100% {
-    transform: translateX(120%) skewX(-18deg);
-  }
-}
-
-@keyframes card-tide {
+@keyframes blue-block-settle {
   0% {
     transform: translate(0, 0) skew(-18deg);
   }
   100% {
-    transform: translate(-18px, -12px) skew(-18deg);
+    transform: translate(-10px, -8px) skew(-18deg);
   }
 }
 
-@keyframes angled-sheen {
-  0%,
-  58% {
-    transform: translateX(-120%);
-  }
-  100% {
-    transform: translateX(120%);
-  }
-}
-
-@keyframes image-drift {
+@keyframes image-breath {
   0% {
-    filter: saturate(0.94) contrast(1);
-    transform: scale(1.01) translateX(-0.6%);
+    filter: saturate(0.98) contrast(1);
+    transform: scale(1.01);
   }
   100% {
-    filter: saturate(1.08) contrast(1.05);
-    transform: scale(1.045) translateX(0.8%);
+    filter: saturate(1.06) contrast(1.035);
+    transform: scale(1.03);
   }
 }
 
-@keyframes footer-current {
+@keyframes footer-glow-settle {
   0% {
-    opacity: 0.34;
-    transform: translateX(0) skewX(-12deg);
+    opacity: 0.24;
+    transform: translateX(0) scale(1);
   }
   100% {
+    opacity: 0.52;
+    transform: translateX(112%) scale(1.08);
+  }
+}
+
+@keyframes panel-arrive {
+  0% {
     opacity: 0.72;
-    transform: translateX(145%) skewX(-12deg);
-  }
-}
-
-@keyframes scroll-lift {
-  0% {
-    opacity: 0.58;
-    transform: translateY(34px) rotateX(4deg);
-  }
-  62% {
-    opacity: 1;
+    transform: translateY(26px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) rotateX(0);
-  }
-}
-
-@keyframes stat-lock {
-  0% {
-    clip-path: inset(0 0 100% 0);
-    transform: translateY(18px);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
     transform: translateY(0);
   }
 }
 
-@keyframes chip-slide {
+@keyframes stat-rise {
   0% {
-    opacity: 0.4;
-    transform: translateX(-16px) skewX(-6deg);
+    opacity: 0.76;
+    transform: translateY(18px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0) skewX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes headline-track {
+@keyframes chip-place {
   0% {
-    letter-spacing: 0.08em;
-    opacity: 0.68;
+    opacity: 0.6;
+    transform: translateY(12px);
   }
   100% {
-    letter-spacing: 0;
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes scroll-image-crop {
+@keyframes heading-set {
   0% {
-    clip-path: inset(12% 0 12% 0);
+    opacity: 0.78;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes image-window {
+  0% {
+    clip-path: inset(7% 7% 7% 7%);
   }
   100% {
     clip-path: inset(0 0 0 0);
   }
 }
 
-@keyframes footer-rise {
+@keyframes footer-arrive {
   0% {
     border-top-color: rgba(0, 131, 144, 0.2);
-    transform: translateY(34px);
+    transform: translateY(26px);
   }
   100% {
     border-top-color: var(--blue);
