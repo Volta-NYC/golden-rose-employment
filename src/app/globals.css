@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Condensed:wght@400;600;700;900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -24,9 +25,7 @@ body {
   margin: 0;
   background: var(--black);
   color: var(--white);
-  font-family:
-    Arial, Helvetica, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -52,8 +51,11 @@ main {
   min-height: 92vh;
   padding: 22px clamp(18px, 5vw, 72px) 72px;
   background:
-    linear-gradient(90deg, rgba(8, 8, 8, 0.96), rgba(8, 8, 8, 0.78)),
-    linear-gradient(135deg, var(--blue-dark), var(--black) 48%, var(--blue) 100%);
+    linear-gradient(90deg, rgba(8, 8, 8, 0.96), rgba(8, 8, 8, 0.7)),
+    linear-gradient(180deg, rgba(0, 131, 144, 0.42), rgba(8, 8, 8, 0.78)),
+    url("https://img1.wsimg.com/isteam/stock/naxm9Al/:/rs=w:1920,h:1080,cg:true,m/cr=w:1920,h:1080,a:cc");
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 
@@ -160,11 +162,12 @@ p {
 
 h1 {
   color: var(--white);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(3.8rem, 10vw, 8.6rem);
+  font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  font-size: clamp(3rem, 7.7vw, 7.25rem);
   font-weight: 900;
-  letter-spacing: 0.01em;
-  line-height: 0.86;
+  letter-spacing: 0;
+  line-height: 0.92;
   margin-bottom: 28px;
   max-width: 880px;
   text-transform: uppercase;
@@ -172,11 +175,12 @@ h1 {
 
 h2 {
   color: var(--white);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(2.15rem, 5vw, 4.9rem);
+  font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  font-size: clamp(2rem, 4.3vw, 4.25rem);
   font-weight: 900;
-  letter-spacing: 0.01em;
-  line-height: 0.92;
+  letter-spacing: 0;
+  line-height: 0.98;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -344,7 +348,8 @@ figure,
 .stats-strip strong {
   color: var(--blue-light);
   display: block;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
 }
@@ -447,7 +452,8 @@ li::before {
 .process-grid article span {
   color: var(--blue-light);
   display: block;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
   font-size: 3rem;
   line-height: 1;
   margin-bottom: 24px;

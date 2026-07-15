@@ -2,13 +2,18 @@
 
 import { useState } from "react";
 
-type Language = "English" | "Spanish";
+export type Language = "en" | "es";
 
-export function LanguagePopup() {
+type LanguagePopupProps = {
+  onChoose: (language: Language) => void;
+};
+
+export function LanguagePopup({ onChoose }: LanguagePopupProps) {
   const [isOpen, setIsOpen] = useState(true);
 
   function chooseLanguage(language: Language) {
-    document.documentElement.lang = language === "Spanish" ? "es" : "en";
+    document.documentElement.lang = language;
+    onChoose(language);
     setIsOpen(false);
   }
 
@@ -31,10 +36,10 @@ export function LanguagePopup() {
           para continuar.
         </p>
         <div className="language-actions">
-          <button type="button" onClick={() => chooseLanguage("English")}>
+          <button type="button" onClick={() => chooseLanguage("en")}>
             English
           </button>
-          <button type="button" onClick={() => chooseLanguage("Spanish")}>
+          <button type="button" onClick={() => chooseLanguage("es")}>
             Espanol
           </button>
         </div>
