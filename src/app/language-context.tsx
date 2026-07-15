@@ -2,7 +2,6 @@
 
 import { createContext, ReactNode, useContext, useState } from "react";
 import { Language, siteCopy } from "./site-content";
-import { LanguagePopup } from "./language-popup";
 
 type LanguageContextValue = {
   language: Language;
@@ -24,7 +23,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     <LanguageContext.Provider
       value={{ language, setLanguage, copy: siteCopy[language] }}
     >
-      <LanguagePopup onChoose={setLanguage} />
       {children}
     </LanguageContext.Provider>
   );

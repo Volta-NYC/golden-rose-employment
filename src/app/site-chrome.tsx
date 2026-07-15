@@ -13,7 +13,7 @@ const navItems = [
 ] as const;
 
 export function SiteHeader() {
-  const { copy } = useLanguage();
+  const { copy, language, setLanguage } = useLanguage();
   const pathname = usePathname();
 
   return (
@@ -45,6 +45,13 @@ export function SiteHeader() {
             </Link>
           );
         })}
+        <button
+          className="language-toggle"
+          onClick={() => setLanguage(language === "en" ? "es" : "en")}
+          type="button"
+        >
+          {language === "en" ? "Espanol" : "English"}
+        </button>
       </nav>
     </header>
   );
