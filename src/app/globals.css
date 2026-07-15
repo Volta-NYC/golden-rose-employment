@@ -871,6 +871,19 @@ form p {
     transform-origin: 50% 100%;
   }
 
+  .page-hero .eyebrow,
+  .page-hero .lede,
+  .section p,
+  .service-detail li,
+  .contact-info-card span,
+  .contact-info-card a,
+  form label,
+  form p {
+    animation: text-fade-up both;
+    animation-range: entry 10% cover 30%;
+    animation-timeline: view();
+  }
+
   .stats-strip div {
     animation: stat-rise both;
     animation-range: entry 8% cover 34%;
@@ -971,8 +984,11 @@ form p {
 
 @keyframes panel-arrive {
   0% {
-    opacity: 0.72;
+    opacity: 0;
     transform: translateY(26px);
+  }
+  45% {
+    opacity: 0.72;
   }
   100% {
     opacity: 1;
@@ -982,7 +998,7 @@ form p {
 
 @keyframes stat-rise {
   0% {
-    opacity: 0.76;
+    opacity: 0;
     transform: translateY(18px);
   }
   100% {
@@ -993,7 +1009,7 @@ form p {
 
 @keyframes chip-place {
   0% {
-    opacity: 0.6;
+    opacity: 0;
     transform: translateY(12px);
   }
   100% {
@@ -1004,8 +1020,19 @@ form p {
 
 @keyframes heading-set {
   0% {
-    opacity: 0.78;
+    opacity: 0;
     transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
   }
   100% {
     opacity: 1;
