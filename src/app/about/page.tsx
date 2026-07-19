@@ -14,7 +14,7 @@ export default function AboutPage() {
         className="page-hero image-page-hero"
         style={
           {
-            "--page-hero-image": `url("${placeholderImages.community}")`,
+            "--page-hero-image": `url("${placeholderImages.about}")`,
           } as CSSProperties
         }
       >

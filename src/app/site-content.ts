@@ -4,6 +4,8 @@ export const oldHeroImage =
   "https://img1.wsimg.com/isteam/stock/naxm9Al/:/rs=w:1920,h:1080,cg:true,m/cr=w:1920,h:1080,a:cc";
 
 export const placeholderImages = {
+  about:
+    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&fm=jpg&q=80&w=1400",
   domestic:
     "https://images.unsplash.com/photo-1758273705723-26ef454252ce?auto=format&fit=crop&fm=jpg&q=80&w=1400",
   restaurant:
