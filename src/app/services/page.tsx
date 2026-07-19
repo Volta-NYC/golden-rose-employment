@@ -1,6 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
+import type { CSSProperties } from "react";
 import { useLanguage } from "../language-context";
 import { placeholderImages } from "../site-content";
 
@@ -9,7 +10,14 @@ export default function ServicesPage() {
 
   return (
     <main>
-      <section className="page-hero">
+      <section
+        className="page-hero image-page-hero"
+        style={
+          {
+            "--page-hero-image": `url("${placeholderImages.restaurant}")`,
+          } as CSSProperties
+        }
+      >
         <p className="eyebrow">{copy.services.eyebrow}</p>
         <h1>{copy.services.title}</h1>
         <p className="lede">{copy.services.text}</p>

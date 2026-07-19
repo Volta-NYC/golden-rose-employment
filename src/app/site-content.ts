@@ -52,19 +52,37 @@ export const siteCopy = {
       cards: [
         {
           title: "Housekeeper Nannies",
-          text: "Housekeeping services, elderly care, live-in, live-out, cleaning nannies, and childcare support.",
+          items: [
+            "Housekeeping services",
+            "Elderly care",
+            "Live-in and live-out support",
+            "Cleaning nannies",
+            "Childcare support",
+          ],
           href: "/services",
           image: "domestic",
         },
         {
           title: "Restaurants",
-          text: "Cooks, chefs, deli staff, grill men, busboys, dishwashers, waiters, waitresses, bartenders, and delivery help.",
+          items: [
+            "Cooks and chefs",
+            "Deli and grill staff",
+            "Busboys and dishwashers",
+            "Waiters and waitresses",
+            "Bartenders and delivery help",
+          ],
           href: "/services",
           image: "restaurant",
         },
         {
           title: "General Labor",
-          text: "Painters, carpenters, drivers, demolition, maintenance workers, chauffeurs, personal assistants, and staffing needs.",
+          items: [
+            "Painters and carpenters",
+            "Drivers and chauffeurs",
+            "Demolition and maintenance",
+            "Personal assistants",
+            "Additional staffing needs",
+          ],
           href: "/services",
           image: "labor",
         },
@@ -194,19 +212,37 @@ export const siteCopy = {
       cards: [
         {
           title: "Housekeeper Nannies",
-          text: "Limpieza, cuidado de ancianos, interna, entrada por salida, nineras y cuidado de bebes.",
+          items: [
+            "Limpieza del hogar",
+            "Cuidado de ancianos",
+            "Interna y entrada por salida",
+            "Nineras de limpieza",
+            "Cuidado de bebes",
+          ],
           href: "/services",
           image: "domestic",
         },
         {
           title: "Restaurantes",
-          text: "Cocineros, chefs, deli, grill, busboys, lavaplatos, meseras, bartenders y deliveristas.",
+          items: [
+            "Cocineros y chefs",
+            "Deli y grill",
+            "Busboys y lavaplatos",
+            "Meseros y meseras",
+            "Bartenders y deliveristas",
+          ],
           href: "/services",
           image: "restaurant",
         },
         {
           title: "Labor General",
-          text: "Pintores, carpinteros, choferes, demolicion, mantenimiento, asistentes personales y construccion.",
+          items: [
+            "Pintores y carpinteros",
+            "Choferes",
+            "Demolicion y mantenimiento",
+            "Asistentes personales",
+            "Trabajo de construccion",
+          ],
           href: "/services",
           image: "labor",
         },

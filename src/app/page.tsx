@@ -79,7 +79,11 @@ export default function Home() {
                 src={placeholderImages[card.image as keyof typeof placeholderImages]}
               />
               <span>{card.title}</span>
-              <p>{card.text}</p>
+              <ul className="preview-list">
+                {card.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </Link>
           ))}
         </div>
