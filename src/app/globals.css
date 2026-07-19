@@ -857,8 +857,19 @@ figcaption {
   align-items: start;
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.56fr);
   padding-top: 32px;
+}
+
+.intake-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#employer,
+#applicant {
+  scroll-margin-top: 118px;
 }
 
 .contact-info-card {
@@ -1254,6 +1265,7 @@ form p {
   .contact,
   .bilingual,
   .contact-layout,
+  .intake-grid,
   .service-focus {
     grid-template-columns: 1fr;
   }

@@ -1,7 +1,11 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { ContactForm } from "../contact-form";
+import {
+  ApplicantIntakeForm,
+  EmployerRequestForm,
+  intakeFormTitles,
+} from "../contact-form";
 import { useLanguage } from "../language-context";
 import { placeholderImages } from "../site-content";
 
@@ -36,11 +40,17 @@ export default function ContactPage() {
         </div>
       </section>
       <section className="section contact-layout">
-        <div className="contact-card">
-          <h2>{copy.contact.formTitle}</h2>
-          <ContactForm language={language} />
+        <div className="intake-grid">
+          <div className="contact-card" id="employer">
+            <h2>{intakeFormTitles[language].employer}</h2>
+            <EmployerRequestForm language={language} />
+          </div>
+          <div className="contact-card" id="applicant">
+            <h2>{intakeFormTitles[language].applicant}</h2>
+            <ApplicantIntakeForm language={language} />
+          </div>
         </div>
-        <div className="contact-info-card">
+        <div className="contact-card">
           <h2>{copy.contact.business}</h2>
           <div>
             <strong>Address</strong>

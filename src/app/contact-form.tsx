@@ -5,127 +5,210 @@ import { Language } from "./site-content";
 
 const formCopy = {
   en: {
-    labels: {
-      visitorType: "I am a",
-      name: "Name",
-      contact: "Phone or email",
-      message: "What do you need?",
+    employer: {
+      title: "Employer request",
+      labels: {
+        name: "Name",
+        contact: "Phone or email",
+        role: "Type of worker needed",
+        schedule: "Schedule",
+        details: "Notes",
+      },
+      placeholders: {
+        name: "Your name",
+        contact: "Best way to reach you",
+        role: "Housekeeper, cook, driver, cleaner...",
+        schedule: "Live-in, weekends, full-time, ASAP...",
+        details: "Location, experience needed, start date, language, pay range.",
+      },
+      button: "Request workers",
+      intro: "Hello Golden Rose, I am an employer requesting workers.",
     },
-    options: {
-      employer: "Employer looking for workers",
-      applicant: "Applicant looking for work",
-      partner: "Community partner",
+    applicant: {
+      title: "Applicant intake",
+      labels: {
+        name: "Name",
+        contact: "Phone or email",
+        work: "Work wanted",
+        experience: "Experience",
+        availability: "Availability",
+      },
+      placeholders: {
+        name: "Your name",
+        contact: "Best way to reach you",
+        work: "Housekeeping, restaurant, labor, childcare...",
+        experience: "Briefly describe your work history",
+        availability: "Days, hours, live-in/live-out, start date.",
+      },
+      button: "Apply for work",
+      intro: "Hello Golden Rose, I am looking for work.",
     },
-    placeholders: {
-      name: "Your name",
-      contact: "Best way to reach you",
-      message:
-        "Tell us about the role, schedule, experience, or support you need.",
-    },
-    button: "Submit request",
-    note: "Your request opens in WhatsApp so Golden Rose can receive the details quickly. CRM or email automation can be added in the next phase.",
-    intro: "Hello Golden Rose, I would like to submit an intake request.",
-    fields: {
-      visitorType: "I am a",
-      name: "Name",
-      contact: "Phone or email",
-      message: "Details",
-    },
+    note: "Submissions open in WhatsApp so Golden Rose can receive the details quickly.",
   },
   es: {
-    labels: {
-      visitorType: "Yo soy",
-      name: "Nombre",
-      contact: "Telefono o email",
-      message: "Que necesita?",
+    employer: {
+      title: "Solicitud de empleador",
+      labels: {
+        name: "Nombre",
+        contact: "Telefono o email",
+        role: "Tipo de trabajador que necesita",
+        schedule: "Horario",
+        details: "Notas",
+      },
+      placeholders: {
+        name: "Su nombre",
+        contact: "La mejor forma de contactarle",
+        role: "Housekeeper, cocinero, chofer, limpieza...",
+        schedule: "Interna, fines de semana, tiempo completo, urgente...",
+        details: "Ubicacion, experiencia necesaria, fecha, idioma, pago.",
+      },
+      button: "Solicitar trabajadores",
+      intro: "Hola Golden Rose, soy empleador y necesito trabajadores.",
     },
-    options: {
-      employer: "Empleador buscando trabajadores",
-      applicant: "Solicitante buscando empleo",
-      partner: "Aliado comunitario",
+    applicant: {
+      title: "Solicitud de empleo",
+      labels: {
+        name: "Nombre",
+        contact: "Telefono o email",
+        work: "Trabajo que busca",
+        experience: "Experiencia",
+        availability: "Disponibilidad",
+      },
+      placeholders: {
+        name: "Su nombre",
+        contact: "La mejor forma de contactarle",
+        work: "Limpieza, restaurante, labor, cuidado de ninos...",
+        experience: "Describa brevemente su experiencia",
+        availability: "Dias, horas, interna/entrada por salida, fecha.",
+      },
+      button: "Buscar empleo",
+      intro: "Hola Golden Rose, estoy buscando empleo.",
     },
-    placeholders: {
-      name: "Su nombre",
-      contact: "La mejor forma de contactarle",
-      message:
-        "Cuéntenos sobre el puesto, horario, experiencia o apoyo que necesita.",
-    },
-    button: "Enviar solicitud",
-    note: "Su solicitud se abre en WhatsApp para que Golden Rose reciba los detalles rapidamente. Automatizacion por CRM o email puede agregarse en la proxima fase.",
-    intro: "Hola Golden Rose, me gustaria enviar una solicitud.",
-    fields: {
-      visitorType: "Yo soy",
-      name: "Nombre",
-      contact: "Telefono o email",
-      message: "Detalles",
-    },
+    note: "Las solicitudes se abren en WhatsApp para que Golden Rose reciba los detalles rapidamente.",
   },
 };
 
-type ContactFormProps = {
+type IntakeFormProps = {
   language: Language;
 };
 
-export function ContactForm({ language }: ContactFormProps) {
-  const copy = formCopy[language];
+function openWhatsApp(lines: string[]) {
+  window.open(
+    `https://wa.me/13473509660?text=${encodeURIComponent(lines.join("\n"))}`,
+    "_blank",
+    "noopener,noreferrer",
+  );
+}
+
+export function EmployerRequestForm({ language }: IntakeFormProps) {
+  const copy = formCopy[language].employer;
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = new FormData(event.currentTarget);
-    const visitorType =
-      form.get("visitorType")?.toString() as keyof typeof copy.options;
-    const name = form.get("name")?.toString().trim() || "Not provided";
-    const contact = form.get("contact")?.toString().trim() || "Not provided";
-    const message = form.get("message")?.toString().trim() || "Not provided";
-
-    const text = [
+    openWhatsApp([
       copy.intro,
-      `${copy.fields.visitorType}: ${copy.options[visitorType] ?? copy.options.employer}`,
-      `${copy.fields.name}: ${name}`,
-      `${copy.fields.contact}: ${contact}`,
-      `${copy.fields.message}: ${message}`,
-    ].join("\n");
-
-    window.open(
-      `https://wa.me/13473509660?text=${encodeURIComponent(text)}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
+      `${copy.labels.name}: ${form.get("name") || "Not provided"}`,
+      `${copy.labels.contact}: ${form.get("contact") || "Not provided"}`,
+      `${copy.labels.role}: ${form.get("role") || "Not provided"}`,
+      `${copy.labels.schedule}: ${form.get("schedule") || "Not provided"}`,
+      `${copy.labels.details}: ${form.get("details") || "Not provided"}`,
+    ]);
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        {copy.labels.visitorType}
-        <select name="visitorType" defaultValue="employer">
-          <option value="employer">{copy.options.employer}</option>
-          <option value="applicant">{copy.options.applicant}</option>
-          <option value="partner">{copy.options.partner}</option>
-        </select>
-      </label>
       <label>
         {copy.labels.name}
         <input name="name" type="text" placeholder={copy.placeholders.name} />
       </label>
       <label>
         {copy.labels.contact}
+        <input name="contact" type="text" placeholder={copy.placeholders.contact} />
+      </label>
+      <label>
+        {copy.labels.role}
+        <input name="role" type="text" placeholder={copy.placeholders.role} />
+      </label>
+      <label>
+        {copy.labels.schedule}
         <input
-          name="contact"
+          name="schedule"
           type="text"
-          placeholder={copy.placeholders.contact}
+          placeholder={copy.placeholders.schedule}
         />
       </label>
       <label>
-        {copy.labels.message}
-        <textarea
-          name="message"
-          placeholder={copy.placeholders.message}
-          rows={5}
-        />
+        {copy.labels.details}
+        <textarea name="details" placeholder={copy.placeholders.details} rows={4} />
       </label>
       <button type="submit">{copy.button}</button>
-      <p>{copy.note}</p>
+      <p>{formCopy[language].note}</p>
     </form>
   );
 }
+
+export function ApplicantIntakeForm({ language }: IntakeFormProps) {
+  const copy = formCopy[language].applicant;
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const form = new FormData(event.currentTarget);
+    openWhatsApp([
+      copy.intro,
+      `${copy.labels.name}: ${form.get("name") || "Not provided"}`,
+      `${copy.labels.contact}: ${form.get("contact") || "Not provided"}`,
+      `${copy.labels.work}: ${form.get("work") || "Not provided"}`,
+      `${copy.labels.experience}: ${form.get("experience") || "Not provided"}`,
+      `${copy.labels.availability}: ${form.get("availability") || "Not provided"}`,
+    ]);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        {copy.labels.name}
+        <input name="name" type="text" placeholder={copy.placeholders.name} />
+      </label>
+      <label>
+        {copy.labels.contact}
+        <input name="contact" type="text" placeholder={copy.placeholders.contact} />
+      </label>
+      <label>
+        {copy.labels.work}
+        <input name="work" type="text" placeholder={copy.placeholders.work} />
+      </label>
+      <label>
+        {copy.labels.experience}
+        <textarea
+          name="experience"
+          placeholder={copy.placeholders.experience}
+          rows={3}
+        />
+      </label>
+      <label>
+        {copy.labels.availability}
+        <input
+          name="availability"
+          type="text"
+          placeholder={copy.placeholders.availability}
+        />
+      </label>
+      <button type="submit">{copy.button}</button>
+      <p>{formCopy[language].note}</p>
+    </form>
+  );
+}
+
+export const intakeFormTitles = {
+  en: {
+    employer: formCopy.en.employer.title,
+    applicant: formCopy.en.applicant.title,
+  },
+  es: {
+    employer: formCopy.es.employer.title,
+    applicant: formCopy.es.applicant.title,
+  },
+};
