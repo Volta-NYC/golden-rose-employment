@@ -786,10 +786,47 @@ figcaption {
   gap: 18px;
   grid-template-rows: auto 1fr;
   padding: 16px;
+  transition:
+    border-color 220ms ease,
+    transform 220ms ease;
+}
+
+.service-detail:hover {
+  border-color: var(--blue-light);
+  transform: translateY(-2px);
 }
 
 .service-detail > div {
   padding: 0 12px 14px;
+}
+
+.service-detail p,
+.service-focus p {
+  margin-bottom: 18px;
+}
+
+.service-detail-sections {
+  display: grid;
+  gap: 18px;
+  padding-top: 0;
+}
+
+.service-focus {
+  background:
+    linear-gradient(135deg, rgba(125, 33, 56, 0.24), transparent 42%),
+    rgba(7, 4, 5, 0.84);
+  border: 1px solid var(--line);
+  border-left: 8px solid var(--blue);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 0.82fr) minmax(280px, 1fr) auto;
+  scroll-margin-top: 118px;
+  padding: 28px;
+}
+
+.service-focus .button {
+  align-self: end;
+  white-space: nowrap;
 }
 
 .service-chip-list {
@@ -1212,7 +1249,8 @@ form p {
   .community,
   .contact,
   .bilingual,
-  .contact-layout {
+  .contact-layout,
+  .service-focus {
     grid-template-columns: 1fr;
   }
 

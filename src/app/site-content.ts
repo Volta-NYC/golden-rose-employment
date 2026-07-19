@@ -75,7 +75,7 @@ export const siteCopy = {
             "Cleaning nannies",
             "Childcare support",
           ],
-          href: "/services",
+          href: "/services#domestic-care",
           image: "domestic",
         },
         {
@@ -87,7 +87,7 @@ export const siteCopy = {
             "Waiters and waitresses",
             "Bartenders and delivery help",
           ],
-          href: "/services",
+          href: "/services#restaurant-staff",
           image: "restaurant",
         },
         {
@@ -99,7 +99,7 @@ export const siteCopy = {
             "Personal assistants",
             "Additional staffing needs",
           ],
-          href: "/services",
+          href: "/services#general-labor",
           image: "labor",
         },
       ],
@@ -122,7 +122,10 @@ export const siteCopy = {
       groups: [
         {
           title: "Housekeeper Nannies",
+          id: "domestic-care",
           image: "domestic",
+          summary:
+            "Home-focused referrals for families who need dependable domestic care and cleaning support.",
           items: [
             "Housekeeping services",
             "Elderly care",
@@ -134,7 +137,10 @@ export const siteCopy = {
         },
         {
           title: "Restaurants",
+          id: "restaurant-staff",
           image: "restaurant",
+          summary:
+            "Kitchen, floor, counter, and delivery referrals for restaurants and food businesses.",
           items: [
             "Cooks",
             "Chefs",
@@ -151,7 +157,10 @@ export const siteCopy = {
         },
         {
           title: "General Labor",
+          id: "general-labor",
           image: "labor",
+          summary:
+            "Practical workforce referrals for construction, maintenance, driving, cleaning, and other labor needs.",
           items: [
             "Painters",
             "Carpenters",
@@ -249,7 +258,7 @@ export const siteCopy = {
             "Nineras de limpieza",
             "Cuidado de bebes",
           ],
-          href: "/services",
+          href: "/services#domestic-care",
           image: "domestic",
         },
         {
@@ -261,7 +270,7 @@ export const siteCopy = {
             "Meseros y meseras",
             "Bartenders y deliveristas",
           ],
-          href: "/services",
+          href: "/services#restaurant-staff",
           image: "restaurant",
         },
         {
@@ -273,7 +282,7 @@ export const siteCopy = {
             "Asistentes personales",
             "Trabajo de construccion",
           ],
-          href: "/services",
+          href: "/services#general-labor",
           image: "labor",
         },
       ],
@@ -296,7 +305,10 @@ export const siteCopy = {
       groups: [
         {
           title: "Housekeeper Nannies",
+          id: "domestic-care",
           image: "domestic",
+          summary:
+            "Referencias para familias que necesitan apoyo confiable en limpieza, cuidado domestico y cuidado familiar.",
           items: [
             "Housekeeping services",
             "Cuidado de ancianos",
@@ -308,7 +320,10 @@ export const siteCopy = {
         },
         {
           title: "Restaurantes",
+          id: "restaurant-staff",
           image: "restaurant",
+          summary:
+            "Referencias para cocina, servicio, mostrador y delivery en restaurantes y negocios de comida.",
           items: [
             "Cocineros",
             "Chefs",
@@ -325,7 +340,10 @@ export const siteCopy = {
         },
         {
           title: "Labor General",
+          id: "general-labor",
           image: "labor",
+          summary:
+            "Referencias practicas para construccion, mantenimiento, choferes, limpieza y otras necesidades de labor.",
           items: [
             "Pintores",
             "Carpinteros",
