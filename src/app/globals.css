@@ -130,13 +130,19 @@ nav {
   justify-content: flex-end;
 }
 
-nav a {
+nav a,
+nav .language-toggle {
+  align-items: center;
   border: 1px solid transparent;
   color: var(--white);
+  display: inline-flex;
   font-size: 0.82rem;
   font-weight: 800;
+  justify-content: center;
   letter-spacing: 0.04em;
-  padding: 9px 11px;
+  min-height: 56px;
+  min-width: 116px;
+  padding: 0 16px;
   text-transform: uppercase;
   transition:
     background-color 220ms ease,
@@ -146,12 +152,14 @@ nav a {
 }
 
 nav a:hover,
-nav a.is-active {
+nav a.is-active,
+nav .language-toggle:hover {
   border-color: var(--blue-light);
   color: var(--blue-light);
 }
 
-nav a:hover {
+nav a:hover,
+nav .language-toggle:hover {
   transform: translateY(-1px);
 }
 
@@ -163,8 +171,8 @@ nav a.nav-cta {
   background: linear-gradient(135deg, var(--blue), var(--blue-light));
   border-color: var(--blue);
   color: var(--black-deep);
+  font-weight: 900;
   overflow: hidden;
-  padding-inline: 16px;
   position: relative;
 }
 
@@ -173,6 +181,15 @@ nav a.nav-cta.is-active {
   background: linear-gradient(135deg, var(--rose), var(--rose-light));
   border-color: var(--rose-light);
   color: var(--white);
+}
+
+nav .language-toggle {
+  background: rgba(255, 248, 238, 0.03);
+  border-color: var(--blue-light);
+}
+
+nav .language-toggle:hover {
+  background: rgba(215, 168, 79, 0.14);
 }
 
 .hero-grid,
@@ -1176,7 +1193,8 @@ form p {
     width: 100%;
   }
 
-  .site-header nav a {
+  .site-header nav a,
+  .site-header nav .language-toggle {
     border-color: var(--line);
     text-align: center;
   }
