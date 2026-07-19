@@ -29,6 +29,11 @@ export default function Home() {
                 {copy.home.secondaryAction}
               </Link>
             </div>
+            <div className="trust-proof" aria-label="Golden Rose trust proof">
+              {copy.home.trustProof.map((proof) => (
+                <span key={proof}>{proof}</span>
+              ))}
+            </div>
             <div className="audience-paths" aria-label="Choose a path">
               {copy.home.audiencePaths.map((path) => (
                 <Link className="audience-path" href={path.href} key={path.title}>

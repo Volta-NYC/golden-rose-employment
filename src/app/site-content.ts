@@ -39,6 +39,11 @@ export const siteCopy = {
       text: "Licensed employment referrals for families, employers, and job seekers in Brooklyn since 2016.",
       primaryAction: "I need workers",
       secondaryAction: "I need work",
+      trustProof: [
+        "Licensed NYC employment agency",
+        "Serving Brooklyn since 2016",
+        "English and Spanish support",
+      ],
       audiencePaths: [
         {
           title: "Employers",
@@ -222,6 +227,11 @@ export const siteCopy = {
       text: "Referencias de empleo licenciadas para familias, empleadores y trabajadores en Brooklyn desde 2016.",
       primaryAction: "Necesito trabajadores",
       secondaryAction: "Busco empleo",
+      trustProof: [
+        "Agencia de empleos licenciada en NYC",
+        "Sirviendo Brooklyn desde 2016",
+        "Apoyo en ingles y espanol",
+      ],
       audiencePaths: [
         {
           title: "Empleadores",

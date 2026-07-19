@@ -293,6 +293,26 @@ footer span {
   max-width: 720px;
 }
 
+.trust-proof {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: -4px;
+  max-width: 760px;
+}
+
+.trust-proof span {
+  background: rgba(255, 248, 238, 0.06);
+  border: 1px solid var(--line);
+  color: var(--blue-light);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
 .audience-path {
   background: rgba(7, 4, 5, 0.68);
   border: 1px solid var(--line);

@@ -8,6 +8,7 @@ const revealSelector = [
   ".page-hero h1",
   ".page-hero .lede",
   ".page-hero-actions .button",
+  ".trust-proof span",
   ".section-heading",
   ".section h2",
   ".section p",
