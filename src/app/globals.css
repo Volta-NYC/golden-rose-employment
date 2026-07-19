@@ -1052,6 +1052,10 @@ form p {
   white-space: nowrap;
 }
 
+.mobile-contact-bar {
+  display: none;
+}
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(22px);
@@ -1273,6 +1277,10 @@ form p {
 }
 
 @media (max-width: 560px) {
+  body {
+    padding-bottom: 72px;
+  }
+
   .hero {
     padding-top: 16px;
   }
@@ -1321,5 +1329,36 @@ form p {
 
   .footer-logo {
     width: 82px;
+  }
+
+  .mobile-contact-bar {
+    background: rgba(7, 4, 5, 0.94);
+    border-top: 1px solid var(--line);
+    bottom: 0;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    left: 0;
+    padding: 10px 12px;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+  }
+
+  .mobile-contact-bar a {
+    align-items: center;
+    background: linear-gradient(135deg, var(--blue), var(--blue-light));
+    color: var(--black-deep);
+    display: inline-flex;
+    font-weight: 900;
+    justify-content: center;
+    min-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .mobile-contact-bar a:last-child {
+    background: transparent;
+    border: 1px solid var(--blue-light);
+    color: var(--white);
   }
 }
