@@ -1,6 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import type { CSSProperties } from "react";
 import { useLanguage } from "../language-context";
 import { placeholderImages } from "../site-content";
@@ -21,6 +22,11 @@ export default function ServicesPage() {
         <p className="eyebrow">{copy.services.eyebrow}</p>
         <h1>{copy.services.title}</h1>
         <p className="lede">{copy.services.text}</p>
+        <div className="page-hero-actions" aria-label="Services page actions">
+          <Link className="button primary" href="/contact">
+            {copy.nav.contact}
+          </Link>
+        </div>
       </section>
       <section className="section service-page-grid">
         {copy.services.groups.map((group) => (

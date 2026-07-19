@@ -1,6 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import type { CSSProperties } from "react";
 import { useLanguage } from "../language-context";
 import { placeholderImages } from "../site-content";
@@ -21,6 +22,14 @@ export default function AboutPage() {
         <p className="eyebrow">{copy.about.eyebrow}</p>
         <h1>{copy.about.title}</h1>
         <p className="lede">{copy.about.text}</p>
+        <div className="page-hero-actions" aria-label="About page actions">
+          <Link className="button primary" href="/contact">
+            {copy.nav.contact}
+          </Link>
+          <Link className="button secondary" href="/services">
+            {copy.nav.services}
+          </Link>
+        </div>
       </section>
       <section className="section split">
         <div className="image-panel">

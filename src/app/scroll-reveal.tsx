@@ -4,9 +4,10 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const revealSelector = [
-  ".page-hero",
   ".page-hero .eyebrow",
+  ".page-hero h1",
   ".page-hero .lede",
+  ".page-hero-actions .button",
   ".section-heading",
   ".section h2",
   ".section p",

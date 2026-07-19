@@ -277,7 +277,8 @@ footer span {
 }
 
 .hero-actions,
-.contact-actions {
+.contact-actions,
+.page-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -633,8 +634,8 @@ figcaption {
 
 .image-page-hero {
   background:
-    linear-gradient(90deg, rgba(7, 4, 5, 0.94), rgba(22, 13, 16, 0.68)),
-    linear-gradient(180deg, rgba(215, 168, 79, 0.28), rgba(125, 33, 56, 0.36)),
+    linear-gradient(90deg, rgba(7, 4, 5, 0.84), rgba(22, 13, 16, 0.46)),
+    linear-gradient(180deg, rgba(215, 168, 79, 0.16), rgba(125, 33, 56, 0.22)),
     var(--page-hero-image);
   background-position: center;
   background-size: cover;
@@ -645,6 +646,11 @@ figcaption {
   padding-left: max(clamp(18px, 5vw, 42px), calc((100vw - 1180px) / 2 + 42px));
   padding-right: max(clamp(18px, 5vw, 42px), calc((100vw - 1180px) / 2 + 42px));
   position: relative;
+}
+
+.image-page-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .image-page-hero::after {
@@ -663,6 +669,10 @@ figcaption {
 
 .page-hero .lede {
   max-width: 700px;
+}
+
+.page-hero-actions {
+  margin-bottom: 0;
 }
 
 .preview-section {
@@ -1201,6 +1211,7 @@ form p {
 
   .hero-actions .button,
   .contact-actions .button,
+  .page-hero-actions .button,
   .language-toggle {
     width: 100%;
   }
