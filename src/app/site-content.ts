@@ -39,6 +39,20 @@ export const siteCopy = {
       text: "Licensed employment referrals for families, employers, and job seekers in Brooklyn since 2016.",
       primaryAction: "I need workers",
       secondaryAction: "I need work",
+      audiencePaths: [
+        {
+          title: "Employers",
+          text: "Request reliable workers for home, restaurant, cleaning, labor, or business staffing needs.",
+          action: "Request workers",
+          href: "/contact?type=employer",
+        },
+        {
+          title: "Job Seekers",
+          text: "Share your experience, preferred schedule, and the kind of work you are looking for.",
+          action: "Apply for work",
+          href: "/contact?type=applicant",
+        },
+      ],
       appointmentTitle: "Call us now to make an appointment.",
       appointmentText:
         "Domestic, restaurant, cleaning, construction, general labor, and other staffing referrals.",
@@ -199,6 +213,20 @@ export const siteCopy = {
       text: "Referencias de empleo licenciadas para familias, empleadores y trabajadores en Brooklyn desde 2016.",
       primaryAction: "Necesito trabajadores",
       secondaryAction: "Busco empleo",
+      audiencePaths: [
+        {
+          title: "Empleadores",
+          text: "Solicite trabajadores confiables para hogar, restaurante, limpieza, labor general o negocio.",
+          action: "Solicitar trabajadores",
+          href: "/contact?type=employer",
+        },
+        {
+          title: "Solicitantes",
+          text: "Comparta su experiencia, horario preferido y el tipo de trabajo que busca.",
+          action: "Buscar empleo",
+          href: "/contact?type=applicant",
+        },
+      ],
       appointmentTitle: "Llamenos ahora para hacer una cita.",
       appointmentText:
         "Referencias para trabajo domestico, restaurantes, limpieza, construccion, labor general y otras necesidades de personal.",

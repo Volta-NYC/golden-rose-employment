@@ -29,6 +29,15 @@ export default function Home() {
                 {copy.home.secondaryAction}
               </Link>
             </div>
+            <div className="audience-paths" aria-label="Choose a path">
+              {copy.home.audiencePaths.map((path) => (
+                <Link className="audience-path" href={path.href} key={path.title}>
+                  <span>{path.title}</span>
+                  <p>{path.text}</p>
+                  <strong>{path.action}</strong>
+                </Link>
+              ))}
+            </div>
           </div>
 
           <aside className="hero-panel" aria-label="Golden Rose highlights">
