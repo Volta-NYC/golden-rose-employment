@@ -114,8 +114,8 @@ export const siteCopy = {
             "Elderly care",
             "Live in - live out",
             "Cleaning nannies",
-            "Nineras / cuidado de bebes",
-            "Limpieza, cuidado de ancianos, entrada por salida, interna",
+            "Childcare and baby care",
+            "Private home cleaning support",
           ],
         },
         {
@@ -132,7 +132,7 @@ export const siteCopy = {
             "Waiters and waitresses",
             "Bartenders",
             "Delivery boys",
-            "Trabajos de cocina, lavaplatos, meseras, deliveristas",
+            "Kitchen, dishwashing, service, and delivery roles",
           ],
         },
         {
