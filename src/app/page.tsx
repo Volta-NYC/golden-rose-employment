@@ -4,7 +4,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { useLanguage } from "./language-context";
-import { oldHeroImage, placeholderImages } from "./site-content";
+import { logoImage, oldHeroImage, placeholderImages } from "./site-content";
 
 export default function Home() {
   const { copy } = useLanguage();
@@ -25,7 +25,7 @@ export default function Home() {
               <Link className="button primary" href="/contact">
                 {copy.home.primaryAction}
               </Link>
-              <Link className="button secondary" href="/services">
+              <Link className="button secondary" href="/contact?type=applicant">
                 {copy.home.secondaryAction}
               </Link>
             </div>
@@ -47,9 +47,7 @@ export default function Home() {
 
           <aside className="hero-panel" aria-label="Golden Rose highlights">
             <div className="rose-card">
-              <span className="rose-symbol" aria-hidden="true">
-                2016
-              </span>
+              <img alt="" className="hero-logo" src={logoImage} />
               <h2>{copy.home.appointmentTitle}</h2>
               <p>{copy.home.appointmentText}</p>
             </div>

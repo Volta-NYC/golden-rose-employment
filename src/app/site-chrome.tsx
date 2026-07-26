@@ -1,14 +1,17 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "./language-context";
+import { dcwpLinks, logoImage } from "./site-content";
 
 const navItems = [
   ["home", "/"],
   ["about", "/about"],
   ["services", "/services"],
   ["community", "/community"],
+  ["rights", "/job-seeker-rights"],
   ["contact", "/contact"],
 ] as const;
 
@@ -19,6 +22,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/#top" aria-label="Golden Rose home">
+        <img alt="" src={logoImage} />
         <span>
           <strong>Golden Rose</strong>
           <small>Agencia de Empleos NYC</small>
@@ -71,13 +75,15 @@ export function SiteFooter() {
       <footer className="site-footer">
         <div className="footer-grid">
           <div className="footer-brand">
-            <div className="footer-logo" aria-hidden="true">
-              GR
-            </div>
+            <img alt="" className="footer-logo" src={logoImage} />
             <div>
               <strong>Golden Rose Agencia de Empleos NYC</strong>
               <span>{copy.footer.tagline}</span>
               <span>{copy.footer.appointment}</span>
+              <span className="license-line">{copy.footer.legalName}</span>
+              <span>{copy.footer.address}</span>
+              <span>{copy.footer.license}</span>
+              <span>{copy.footer.phone}</span>
             </div>
           </div>
           <div className="footer-column">
@@ -102,6 +108,9 @@ export function SiteFooter() {
               target="_blank"
             >
               Facebook
+            </a>
+            <a href={dcwpLinks.jobHunters} rel="noreferrer" target="_blank">
+              DCWP Job Hunter Rights
             </a>
             <a href="/contact">{copy.nav.contact}</a>
           </div>

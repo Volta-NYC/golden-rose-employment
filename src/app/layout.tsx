@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Golden Rose Employment Agency Inc. | Brooklyn Employment Referrals",
   description:
-    "Licensed Brooklyn employment referral agency connecting New York employers with reliable workers since 2016. Bilingual service in English and Spanish.",
+    "Licensed Brooklyn employment agency connecting New York employers and job seekers since 2016. Warm bilingual service in English and Spanish.",
   keywords: [
     "Brooklyn employment agency",
     "NYC employment referral agency",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Golden Rose Employment Agency Inc.",
     description:
-      "Warm, professional employment referrals for New York employers and job seekers.",
+      "Warm, bilingual employment referrals for New York employers and job seekers.",
     type: "website",
     locale: "en_US",
   },

@@ -16,6 +16,14 @@ export const placeholderImages = {
     "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&fm=jpg&q=80&w=1400",
 };
 
+export const logoImage = "/golden-rose-logo.jpg";
+
+export const dcwpLinks = {
+  employmentAgencies:
+    "https://www.nyc.gov/site/dca/businesses/info-employment-agencies.page",
+  jobHunters: "https://www.nyc.gov/site/dca/workers/job-hunters.page",
+};
+
 export const siteCopy = {
   en: {
     nav: {
@@ -23,26 +31,31 @@ export const siteCopy = {
       about: "About",
       services: "Services",
       community: "Community",
+      rights: "Worker Rights",
       contact: "Contact",
     },
     footer: {
-      tagline: "Licensed employment referral agency in Brooklyn, NY.",
+      tagline: "Licensed employment agency in Brooklyn, NY.",
       appointment:
         "We love our customers. To serve you better, please call us and make an appointment.",
       hours: "Open 9:00 AM - 5:00 PM. Closed Saturdays.",
-      rights: "Copyright © 2020 Agencia de Empleos NYC - All Rights Reserved.",
+      legalName: "Golden Rose Employment Agency Inc. - Licensed Employment Agency",
+      address: "381 Troy Ave, Brooklyn, NY 11213",
+      license: "NYC DCWP License No. 2032912-DCA",
+      phone: "347-350-9660",
+      rights: "Copyright (c) 2026 Agencia de Empleos NYC - All Rights Reserved.",
       madeBy: "Made by Volta",
     },
     home: {
       eyebrow: "Bienvenidos / Welcome",
-      title: "Golden Rose Agencia de Empleos NYC",
-      text: "Licensed employment referrals for families, employers, and job seekers in Brooklyn since 2016.",
+      title: "Golden Rose Employment Agency",
+      text: "Warm, bilingual employment referrals for families, employers, and job seekers in Brooklyn since 2016.",
       primaryAction: "I need workers",
       secondaryAction: "I need work",
       trustProof: [
-        "Licensed NYC employment agency",
-        "Serving Brooklyn since 2016",
-        "English and Spanish support",
+        "Serving New York since 2016",
+        "Licensed employment agency",
+        "English and Spanish first",
       ],
       audiencePaths: [
         {
@@ -54,7 +67,7 @@ export const siteCopy = {
         {
           title: "Job Seekers",
           text: "Share your experience, preferred schedule, and the kind of work you are looking for.",
-          action: "Apply for work",
+          action: "Tell us what you need",
           href: "/contact?type=applicant",
         },
       ],
@@ -64,12 +77,12 @@ export const siteCopy = {
       stats: [
         ["2016", "Serving New York since"],
         ["NYC", "Licensed employment agency"],
-        ["2", "English and Spanish"],
+        ["EN/ES", "English and Spanish"],
         ["381", "Troy Ave, Brooklyn"],
       ],
       introTitle: "A Brooklyn agency built on personal referrals.",
       introText:
-        "Golden Rose connects employers with reliable workers and helps applicants prepare for better opportunities. Our team keeps the process direct, practical, and easy to understand.",
+        "Golden Rose connects employers with reliable workers and helps job seekers prepare for better opportunities. Our team keeps the process direct, practical, and easy to understand.",
       cards: [
         {
           title: "Housekeeper Nannies",
@@ -123,7 +136,7 @@ export const siteCopy = {
     services: {
       eyebrow: "Services",
       title: "Staffing referrals for homes, restaurants, and local businesses.",
-      text: "Golden Rose organizes each request by the kind of work, schedule, and experience needed so employers and applicants can move quickly.",
+      text: "Golden Rose organizes each request by the kind of work, schedule, and experience needed so employers and job seekers can move quickly.",
       groups: [
         {
           title: "Housekeeper Nannies",
@@ -204,6 +217,31 @@ export const siteCopy = {
       hours: "09:00 am - 05:00 pm",
       closed: "Close on Saturdays",
     },
+    rights: {
+      eyebrow: "Job Seeker Rights",
+      title: "Know your rights before working with any employment agency.",
+      text: "DCWP publishes the Job Hunter's Bill of Rights so workers can understand what employment agencies may and may not do. We keep these materials visible because every job seeker deserves clear information.",
+      sourceLabel: "Official DCWP materials",
+      englishPdf: "English Job Hunter's Bill of Rights",
+      spanishPdf: "Spanish Job Hunter's Bill of Rights",
+      rightsTitle: "Important protections",
+      rightsList: [
+        "Use a licensed employment agency. You can confirm a license by calling 311 or checking NYC resources.",
+        "Employment agencies cannot guarantee that they will find you a job.",
+        "An agency cannot refer you to a job that pays less than minimum wage or denies required overtime.",
+        "You have the right to written information, receipts, and clear terms before moving forward.",
+        "You can file a complaint with DCWP. The City does not ask about immigration status when you make a complaint.",
+      ],
+      spanishTitle: "Derechos importantes",
+      spanishList: [
+        "Use una agencia de empleos licenciada. Puede confirmar una licencia llamando al 311 o revisando recursos de NYC.",
+        "Las agencias de empleo no pueden garantizar que le conseguiran trabajo.",
+        "Una agencia no puede enviarlo a un trabajo que pague menos del salario minimo o niegue overtime requerido.",
+        "Tiene derecho a informacion por escrito, recibos y terminos claros antes de seguir adelante.",
+        "Puede presentar una queja con DCWP. La Ciudad no pregunta sobre estatus migratorio cuando presenta una queja.",
+      ],
+      note: "This page is informational and links to DCWP's official materials. For legal questions, contact DCWP, 311, or a qualified advisor.",
+    },
   },
   es: {
     nav: {
@@ -211,6 +249,7 @@ export const siteCopy = {
       about: "Nosotros",
       services: "Servicios",
       community: "Comunidad",
+      rights: "Derechos",
       contact: "Contacto",
     },
     footer: {
@@ -218,7 +257,11 @@ export const siteCopy = {
       appointment:
         "Queremos servirle mejor. Por favor llamenos para hacer una cita.",
       hours: "Abierto 9:00 AM - 5:00 PM. Cerrado los sabados.",
-      rights: "Copyright © 2020 Agencia de Empleos NYC - Todos los derechos reservados.",
+      legalName: "Golden Rose Employment Agency Inc. - Licensed Employment Agency",
+      address: "381 Troy Ave, Brooklyn, NY 11213",
+      license: "NYC DCWP License No. 2032912-DCA",
+      phone: "347-350-9660",
+      rights: "Copyright (c) 2026 Agencia de Empleos NYC - Todos los derechos reservados.",
       madeBy: "Hecho por Volta",
     },
     home: {
@@ -228,9 +271,9 @@ export const siteCopy = {
       primaryAction: "Necesito trabajadores",
       secondaryAction: "Busco empleo",
       trustProof: [
-        "Agencia de empleos licenciada en NYC",
-        "Sirviendo Brooklyn desde 2016",
-        "Apoyo en ingles y espanol",
+        "Sirviendo a Nueva York desde 2016",
+        "Agencia de empleos licenciada",
+        "Ingles y espanol primero",
       ],
       audiencePaths: [
         {
@@ -240,7 +283,7 @@ export const siteCopy = {
           href: "/contact?type=employer",
         },
         {
-          title: "Solicitantes",
+          title: "Busco Empleo",
           text: "Comparta su experiencia, horario preferido y el tipo de trabajo que busca.",
           action: "Buscar empleo",
           href: "/contact?type=applicant",
@@ -257,7 +300,7 @@ export const siteCopy = {
       ],
       introTitle: "Una agencia de Brooklyn basada en referencias personales.",
       introText:
-        "Golden Rose conecta empleadores con trabajadores confiables y ayuda a solicitantes a prepararse para mejores oportunidades. Nuestro equipo mantiene el proceso directo, practico y facil de entender.",
+        "Golden Rose conecta empleadores con trabajadores confiables y ayuda a personas que buscan empleo a prepararse para mejores oportunidades. Nuestro equipo mantiene el proceso directo, practico y facil de entender.",
       cards: [
         {
           title: "Housekeeper Nannies",
@@ -311,7 +354,7 @@ export const siteCopy = {
     services: {
       eyebrow: "Servicios",
       title: "Referencias de personal para hogares, restaurantes y negocios.",
-      text: "Golden Rose organiza cada solicitud por tipo de trabajo, horario y experiencia para que empleadores y solicitantes puedan avanzar con claridad.",
+      text: "Golden Rose organiza cada solicitud por tipo de trabajo, horario y experiencia para que empleadores y personas buscando empleo puedan avanzar con claridad.",
       groups: [
         {
           title: "Housekeeper Nannies",
@@ -391,6 +434,31 @@ export const siteCopy = {
       openToday: "Abierto hoy",
       hours: "09:00 am - 05:00 pm",
       closed: "Cerrado los sabados",
+    },
+    rights: {
+      eyebrow: "Derechos del Trabajador",
+      title: "Conozca sus derechos antes de trabajar con una agencia de empleos.",
+      text: "DCWP publica la Declaracion de Derechos del Buscador de Empleo para que los trabajadores entiendan lo que una agencia de empleo puede y no puede hacer. Mantenemos estos materiales visibles porque cada persona merece informacion clara.",
+      sourceLabel: "Materiales oficiales de DCWP",
+      englishPdf: "Job Hunter's Bill of Rights en ingles",
+      spanishPdf: "Job Hunter's Bill of Rights en espanol",
+      rightsTitle: "Important protections",
+      rightsList: [
+        "Use a licensed employment agency. You can confirm a license by calling 311 or checking NYC resources.",
+        "Employment agencies cannot guarantee that they will find you a job.",
+        "An agency cannot refer you to a job that pays less than minimum wage or denies required overtime.",
+        "You have the right to written information, receipts, and clear terms before moving forward.",
+        "You can file a complaint with DCWP. The City does not ask about immigration status when you make a complaint.",
+      ],
+      spanishTitle: "Derechos importantes",
+      spanishList: [
+        "Use una agencia de empleos licenciada. Puede confirmar una licencia llamando al 311 o revisando recursos de NYC.",
+        "Las agencias de empleo no pueden garantizar que le conseguiran trabajo.",
+        "Una agencia no puede enviarlo a un trabajo que pague menos del salario minimo o niegue overtime requerido.",
+        "Tiene derecho a informacion por escrito, recibos y terminos claros antes de seguir adelante.",
+        "Puede presentar una queja con DCWP. La Ciudad no pregunta sobre estatus migratorio cuando presenta una queja.",
+      ],
+      note: "Esta pagina es informativa y enlaza a los materiales oficiales de DCWP. Para preguntas legales, contacte a DCWP, 311 o un asesor calificado.",
     },
   },
 };

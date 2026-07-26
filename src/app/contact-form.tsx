@@ -25,7 +25,7 @@ const formCopy = {
       intro: "Hello Golden Rose, I am an employer requesting workers.",
     },
     applicant: {
-      title: "Applicant intake",
+      title: "Job seeker details",
       labels: {
         name: "Name",
         contact: "Phone or email",
@@ -40,10 +40,10 @@ const formCopy = {
         experience: "Briefly describe your work history",
         availability: "Days, hours, live-in/live-out, start date.",
       },
-      button: "Apply for work",
+      button: "Send work details",
       intro: "Hello Golden Rose, I am looking for work.",
     },
-    note: "Submissions open in WhatsApp so Golden Rose can receive the details quickly.",
+    note: "Messages open in WhatsApp so Golden Rose can receive the details quickly.",
   },
   es: {
     employer: {
@@ -66,7 +66,7 @@ const formCopy = {
       intro: "Hola Golden Rose, soy empleador y necesito trabajadores.",
     },
     applicant: {
-      title: "Solicitud de empleo",
+      title: "Datos para buscar empleo",
       labels: {
         name: "Nombre",
         contact: "Telefono o email",
@@ -81,10 +81,10 @@ const formCopy = {
         experience: "Describa brevemente su experiencia",
         availability: "Dias, horas, interna/entrada por salida, fecha.",
       },
-      button: "Buscar empleo",
+      button: "Enviar datos",
       intro: "Hola Golden Rose, estoy buscando empleo.",
     },
-    note: "Las solicitudes se abren en WhatsApp para que Golden Rose reciba los detalles rapidamente.",
+    note: "Los mensajes se abren en WhatsApp para que Golden Rose reciba los detalles rapidamente.",
   },
 };
 
