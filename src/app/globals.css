@@ -1169,13 +1169,15 @@ form p {
 }
 
 .footer-grid {
-  background: rgba(7, 4, 5, 0.58);
-  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(224, 27, 47, 0.1), transparent 52%),
+    rgba(7, 4, 5, 0.32);
   display: grid;
-  gap: 0;
+  gap: clamp(22px, 4vw, 46px);
   grid-template-columns: minmax(320px, 1.5fr) repeat(3, minmax(160px, 0.72fr));
   margin: 0 auto;
   max-width: 1180px;
+  padding: clamp(8px, 1.5vw, 18px) 0;
   position: relative;
   z-index: 1;
 }
@@ -1188,8 +1190,6 @@ form p {
 
 .footer-brand {
   align-items: start;
-  background: linear-gradient(135deg, rgba(224, 27, 47, 0.14), transparent 56%);
-  border-right: 1px solid var(--line);
   display: grid;
   gap: 18px;
   grid-template-columns: 104px minmax(0, 1fr);
@@ -1197,7 +1197,7 @@ form p {
 
 .footer-column {
   align-content: start;
-  border-left: 1px solid rgba(255, 212, 107, 0.1);
+  border-left: 1px solid rgba(255, 212, 107, 0.12);
 }
 
 .footer-logo {
@@ -1602,7 +1602,8 @@ form p {
 
   .footer-column {
     border-left: 0;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(255, 212, 107, 0.12);
+    padding-top: 0;
   }
 }
 
