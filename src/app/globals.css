@@ -94,7 +94,7 @@ main {
   animation: frame-settle 14s ease-in-out infinite;
   border: 1px solid rgba(241, 207, 134, 0.45);
   content: "";
-  inset: 86px clamp(18px, 5vw, 72px) 42px;
+  inset: clamp(32px, 5vw, 58px) clamp(18px, 5vw, 72px) 42px;
   pointer-events: none;
   position: absolute;
 }
