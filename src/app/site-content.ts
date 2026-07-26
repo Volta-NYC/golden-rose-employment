@@ -72,8 +72,8 @@ export const siteCopy = {
         "Domestic household staffing is our primary focus, with commercial staffing referrals also available for local businesses.",
       stats: [
         ["10", "Years in business"],
-        ["1000s", "Workers placed"],
-        ["1000s", "Employers helped"],
+        ["1k+", "Workers placed"],
+        ["1k+", "Employers helped"],
         ["NYC", "All communities served"],
       ],
       introTitle: "A Brooklyn agency built on personal referrals.",
@@ -440,8 +440,8 @@ export const siteCopy = {
         "Nuestro enfoque principal es personal domestico para el hogar, con referencias comerciales para negocios locales.",
       stats: [
         ["10", "Anos en negocio"],
-        ["1000s", "Trabajadores colocados"],
-        ["1000s", "Empleadores ayudados"],
+        ["1k+", "Trabajadores colocados"],
+        ["1k+", "Empleadores ayudados"],
         ["NYC", "Comunidades servidas"],
       ],
       introTitle: "Una agencia de Brooklyn basada en referencias personales.",
