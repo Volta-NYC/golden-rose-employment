@@ -100,6 +100,70 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <section className="section process" aria-labelledby="employer-process">
+        <div className="section-heading">
+          <p className="eyebrow">{copy.home.process.eyebrow}</p>
+          <h2 id="employer-process">{copy.home.process.title}</h2>
+          <p>{copy.home.process.text}</p>
+        </div>
+        <div className="process-grid employer-process-grid">
+          {copy.home.process.steps.map((step, index) => {
+            const details = "details" in step ? step.details : undefined;
+
+            return (
+              <article key={step.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+                {details?.length ? (
+                  <ul>
+                    {details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </article>
+            );
+          })}
+        </div>
+        <div className="process-actions">
+          <Link className="button primary" href="/contact#employer">
+            {copy.home.primaryAction}
+          </Link>
+          <a
+            className="button secondary"
+            href="https://wa.me/13476510276"
+            rel="noreferrer"
+            target="_blank"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <section className="section testimonials" aria-labelledby="trust-proof">
+        <div className="section-heading">
+          <p className="eyebrow">{copy.home.trust.eyebrow}</p>
+          <h2 id="trust-proof">{copy.home.trust.title}</h2>
+          <p>{copy.home.trust.text}</p>
+        </div>
+        <div className="testimonial-grid trust-metrics">
+          {copy.home.stats.map(([value, label]) => (
+            <figure key={label}>
+              <strong>{value}</strong>
+              <figcaption>{label}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="service-card trust-notes">
+          <ul>
+            {copy.home.trust.notes.map((note) => (
+              <li key={note}>{note}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </main>
   );
 }

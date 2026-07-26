@@ -631,11 +631,47 @@ li::before {
 .process-grid article span {
   color: var(--blue-light);
   display: block;
-  font-family: "Archivo Black", Impact, Haettenschweiler, "Arial Narrow Bold",
+  font-family: "Bebas Neue", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
   font-size: 2.35rem;
   line-height: 1;
   margin-bottom: 24px;
+}
+
+.employer-process-grid article {
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+
+.employer-process-grid article p {
+  margin-bottom: 16px;
+}
+
+.employer-process-grid article ul {
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.employer-process-grid article li {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.36;
+  padding-left: 18px;
+}
+
+.employer-process-grid article li::before {
+  height: 6px;
+  top: 0.58em;
+  width: 6px;
+}
+
+.process-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
 }
 
 .bilingual {
@@ -693,6 +729,30 @@ figcaption {
   color: var(--blue-light);
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.trust-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.trust-metrics figure {
+  min-height: 150px;
+}
+
+.trust-metrics strong {
+  color: var(--white);
+  display: block;
+  font-family: "Bebas Neue", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  font-size: clamp(2.7rem, 4.5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 0.94;
+  margin-bottom: 14px;
+  overflow-wrap: anywhere;
+}
+
+.trust-notes {
+  margin-top: 18px;
 }
 
 .contact {

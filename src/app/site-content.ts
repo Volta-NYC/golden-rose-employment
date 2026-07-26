@@ -71,10 +71,10 @@ export const siteCopy = {
       appointmentText:
         "Domestic household staffing is our primary focus, with commercial staffing referrals also available for local businesses.",
       stats: [
-        ["2016", "Serving New York since"],
-        ["NYC", "Licensed employment agency"],
-        ["EN/ES", "English and Spanish"],
-        ["381", "Troy Ave, Brooklyn"],
+        ["10", "Years in business"],
+        ["1000s", "Workers placed"],
+        ["1000s", "Employers helped"],
+        ["NYC", "All communities served"],
       ],
       introTitle: "A Brooklyn agency built on personal referrals.",
       introText:
@@ -117,6 +117,56 @@ export const siteCopy = {
           image: "domestic",
         },
       ],
+      process: {
+        eyebrow: "Process",
+        title: "Employer hiring process",
+        text: "Golden Rose keeps each request practical, personal, and organized from the first call through placement follow-up.",
+        steps: [
+          {
+            title: "Contact Golden Rose",
+            text: "Reach us by phone, WhatsApp, email, or by completing the Employer Request Form.",
+          },
+          {
+            title: "Tell us what you need",
+            text: "Share the details that matter for a strong match.",
+            details: [
+              "Position needed",
+              "Schedule: full-time, part-time, live-in, or live-out",
+              "Location",
+              "Salary or hourly rate",
+              "Preferred experience and language skills",
+              "Start date",
+              "Special requirements such as kosher experience, childcare, elder care, or driver's license",
+            ],
+          },
+          {
+            title: "Recruiter review",
+            text: "Our recruiters review our database and begin searching for qualified candidates.",
+          },
+          {
+            title: "Selected candidates",
+            text: "We present carefully selected candidates that match your requirements.",
+          },
+          {
+            title: "Employer interview",
+            text: "You interview the candidate or candidates and select the person you wish to hire.",
+          },
+          {
+            title: "Placement support",
+            text: "We coordinate the placement and provide follow-up support after the candidate starts working.",
+          },
+        ],
+      },
+      trust: {
+        eyebrow: "Trust Proof",
+        title: "A decade of staffing referrals across New York City.",
+        text: "Families, employers, and job seekers rely on Golden Rose for direct communication, careful matching, and bilingual support.",
+        notes: [
+          "Real testimonials and reviews can be featured with names, initials, or anonymous labels when approved.",
+          "Success stories can be added for domestic placements, household roles, restaurant staffing, and local business hiring.",
+          "Google reviews can be linked here when an official review link is available.",
+        ],
+      },
     },
     about: {
       eyebrow: "About Golden Rose",
@@ -312,10 +362,10 @@ export const siteCopy = {
       appointmentText:
         "Nuestro enfoque principal es personal domestico para el hogar, con referencias comerciales para negocios locales.",
       stats: [
-        ["2016", "Sirviendo a Nueva York desde"],
-        ["NYC", "Agencia de empleos licenciada"],
-        ["2", "Ingles y espanol"],
-        ["381", "Troy Ave, Brooklyn"],
+        ["10", "Anos en negocio"],
+        ["1000s", "Trabajadores colocados"],
+        ["1000s", "Empleadores ayudados"],
+        ["NYC", "Comunidades servidas"],
       ],
       introTitle: "Una agencia de Brooklyn basada en referencias personales.",
       introText:
@@ -358,6 +408,56 @@ export const siteCopy = {
           image: "domestic",
         },
       ],
+      process: {
+        eyebrow: "Proceso",
+        title: "Proceso de contratacion para empleadores",
+        text: "Golden Rose mantiene cada solicitud practica, personal y organizada desde el primer contacto hasta el seguimiento despues de la colocacion.",
+        steps: [
+          {
+            title: "Contacte a Golden Rose",
+            text: "Comuniquese por telefono, WhatsApp, email o completando el Employer Request Form.",
+          },
+          {
+            title: "Diganos lo que necesita",
+            text: "Comparta los detalles importantes para encontrar una buena candidata o candidato.",
+            details: [
+              "Posicion necesaria",
+              "Horario: full-time, part-time, interna o entrada por salida",
+              "Ubicacion",
+              "Salario o pago por hora",
+              "Experiencia e idioma preferido",
+              "Fecha de comienzo",
+              "Requisitos especiales como experiencia kosher, cuidado de ninos, cuidado de ancianos o licencia de conducir",
+            ],
+          },
+          {
+            title: "Revision por reclutadores",
+            text: "Nuestros reclutadores revisan nuestra base de datos y comienzan la busqueda de candidatos calificados.",
+          },
+          {
+            title: "Candidatos seleccionados",
+            text: "Presentamos candidatos cuidadosamente seleccionados que coinciden con sus requisitos.",
+          },
+          {
+            title: "Entrevista del empleador",
+            text: "Usted entrevista al candidato o candidatos y selecciona la persona que desea contratar.",
+          },
+          {
+            title: "Apoyo de colocacion",
+            text: "Coordinamos la colocacion y damos seguimiento despues de que la persona empieza a trabajar.",
+          },
+        ],
+      },
+      trust: {
+        eyebrow: "Confianza",
+        title: "Una decada de referencias de empleo en toda la Ciudad de Nueva York.",
+        text: "Familias, empleadores y trabajadores confian en Golden Rose por su comunicacion directa, seleccion cuidadosa y apoyo bilingue.",
+        notes: [
+          "Testimonios y reviews reales pueden publicarse con nombres, iniciales o anonimos cuando sean aprobados.",
+          "Historias de exito pueden agregarse para colocaciones domesticas, hogar, restaurantes y negocios locales.",
+          "Google reviews pueden enlazarse aqui cuando haya un enlace oficial disponible.",
+        ],
+      },
     },
     about: {
       eyebrow: "Sobre Golden Rose",
