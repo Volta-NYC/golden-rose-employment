@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+  icons: {
+    icon: "/golden-rose-logo.jpg",
+    shortcut: "/golden-rose-logo.jpg",
+    apple: "/golden-rose-logo.jpg",
+  },
 };
 
 export default function RootLayout({
