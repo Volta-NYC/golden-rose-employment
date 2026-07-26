@@ -518,11 +518,11 @@ figure,
 .stats-strip strong {
   color: var(--blue-light);
   display: block;
-  font-family: "Bebas Neue", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-  font-weight: 400;
+  font-weight: 900;
   line-height: 1;
+  text-transform: none;
 }
 
 .stats-strip span {
@@ -796,13 +796,13 @@ figcaption {
 .trust-metrics strong {
   color: var(--white);
   display: block;
-  font-family: "Bebas Neue", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-size: clamp(2.7rem, 4.5vw, 4.2rem);
-  font-weight: 400;
+  font-weight: 900;
   line-height: 0.94;
   margin-bottom: 14px;
   overflow-wrap: anywhere;
+  text-transform: none;
 }
 
 .trust-notes {
