@@ -52,11 +52,7 @@ export const siteCopy = {
       text: "Warm, bilingual employment referrals for families, employers, and job seekers in Brooklyn since 2016.",
       primaryAction: "I need workers",
       secondaryAction: "I need work",
-      trustProof: [
-        "Serving New York since 2016",
-        "Licensed employment agency",
-        "English and Spanish first",
-      ],
+      trustProof: ["Serving New York since 2016"],
       audiencePaths: [
         {
           title: "Employers",
@@ -270,11 +266,7 @@ export const siteCopy = {
       text: "Referencias de empleo licenciadas para familias, empleadores y trabajadores en Brooklyn desde 2016.",
       primaryAction: "Necesito trabajadores",
       secondaryAction: "Busco empleo",
-      trustProof: [
-        "Sirviendo a Nueva York desde 2016",
-        "Agencia de empleos licenciada",
-        "Ingles y espanol primero",
-      ],
+      trustProof: ["Sirviendo a Nueva York desde 2016"],
       audiencePaths: [
         {
           title: "Empleadores",
