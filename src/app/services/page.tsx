@@ -15,7 +15,7 @@ export default function ServicesPage() {
         className="page-hero image-page-hero"
         style={
           {
-            "--page-hero-image": `url("${placeholderImages.restaurant}")`,
+            "--page-hero-image": `url("${placeholderImages.domestic}")`,
           } as CSSProperties
         }
       >
@@ -27,6 +27,21 @@ export default function ServicesPage() {
             {copy.nav.contact}
           </Link>
         </div>
+      </section>
+      <section className="section top-services-band" aria-labelledby="top-services">
+        <div>
+          <p className="eyebrow">{copy.services.eyebrow}</p>
+          <h2 id="top-services">{copy.services.topServicesTitle}</h2>
+          <p>{copy.services.topServicesText}</p>
+        </div>
+        <ol className="top-services-list">
+          {copy.services.topServices.map((service, index) => (
+            <li key={service}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{service}</strong>
+            </li>
+          ))}
+        </ol>
       </section>
       <section className="section service-page-grid" aria-label="Service overview">
         {copy.services.groups.map((group) => (

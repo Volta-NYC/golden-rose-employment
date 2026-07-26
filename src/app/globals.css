@@ -752,6 +752,56 @@ figcaption {
   padding-top: 40px;
 }
 
+.top-services-band {
+  align-items: end;
+  display: grid;
+  gap: clamp(24px, 4vw, 44px);
+  grid-template-columns: minmax(0, 0.66fr) minmax(320px, 1fr);
+  padding-bottom: 34px;
+}
+
+.top-services-band > div {
+  max-width: 620px;
+}
+
+.top-services-list {
+  counter-reset: top-services;
+  display: grid;
+  gap: 12px;
+}
+
+.top-services-list li {
+  align-items: center;
+  background: rgba(7, 4, 5, 0.84);
+  border: 1px solid rgba(241, 207, 134, 0.28);
+  border-left: 6px solid var(--blue);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: auto 1fr;
+  min-height: 74px;
+  padding: 16px 18px;
+}
+
+.top-services-list li::before {
+  display: none;
+}
+
+.top-services-list span {
+  color: var(--blue-light);
+  font-family: "Bebas Neue", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  font-size: 2.1rem;
+  line-height: 1;
+}
+
+.top-services-list strong {
+  color: var(--white);
+  font-size: clamp(1rem, 1.8vw, 1.22rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .preview-grid,
 .service-page-grid {
   display: grid;
@@ -1183,7 +1233,8 @@ form p {
   transform: translateY(0);
 }
 
-.service-chip-list li.reveal-on-scroll {
+.service-chip-list li.reveal-on-scroll,
+.top-services-list li.reveal-on-scroll {
   transform: translateY(14px);
   transition-duration: 560ms;
 }
@@ -1369,6 +1420,7 @@ form p {
   .contact-layout,
   .intake-grid,
   .service-focus,
+  .top-services-band,
   .rights-grid {
     grid-template-columns: 1fr;
   }

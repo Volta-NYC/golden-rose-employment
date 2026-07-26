@@ -7,13 +7,18 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Golden Rose Employment Agency Inc. | Brooklyn Employment Referrals",
   description:
-    "Licensed Brooklyn employment agency connecting New York employers and job seekers since 2016. Warm bilingual service in English and Spanish.",
+    "Licensed Brooklyn employment agency for domestic household staffing, housekeepers, nannies, housekeeper/nannies, commercial staffing, and local business referrals.",
   keywords: [
     "Brooklyn employment agency",
     "NYC employment referral agency",
     "domestic worker referrals",
+    "domestic household staffing",
+    "live-in housekeepers",
+    "live-out housekeepers",
     "housekeeper referrals Brooklyn",
     "nanny referrals NYC",
+    "housekeeper nanny referrals",
+    "commercial staffing Brooklyn",
     "Golden Rose Employment",
   ],
   openGraph: {

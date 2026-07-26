@@ -15,6 +15,7 @@ const revealSelector = [
   ".split > *",
   ".preview-card",
   ".preview-list li",
+  ".top-services-list li",
   ".service-detail",
   ".service-chip-list li",
   ".image-panel",
