@@ -8,6 +8,12 @@ export const placeholderImages = {
     "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&fm=jpg&q=80&w=1400",
   domestic:
     "https://images.unsplash.com/photo-1758273705723-26ef454252ce?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+  liveInHousekeeper:
+    "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+  housekeeper:
+    "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+  nanny:
+    "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&fm=jpg&q=80&w=1400",
   restaurant:
     "https://images.unsplash.com/photo-1776142519748-2b897acaecd7?auto=format&fit=crop&fm=jpg&q=80&w=1400",
   labor:
@@ -90,7 +96,7 @@ export const siteCopy = {
             "Brooklyn and NYC placements",
           ],
           href: "/services#domestic-household-staffing",
-          image: "domestic",
+          image: "liveInHousekeeper",
         },
         {
           title: "Housekeepers",
@@ -102,7 +108,7 @@ export const siteCopy = {
             "Home staffing referrals",
           ],
           href: "/services#domestic-household-staffing",
-          image: "domestic",
+          image: "housekeeper",
         },
         {
           title: "Nannies & Housekeeper/Nannies",
@@ -114,7 +120,7 @@ export const siteCopy = {
             "Mother's helpers",
           ],
           href: "/services#domestic-household-staffing",
-          image: "domestic",
+          image: "nanny",
         },
       ],
       process: {
@@ -458,7 +464,7 @@ export const siteCopy = {
             "Colocaciones en Brooklyn y NYC",
           ],
           href: "/services#domestic-household-staffing",
-          image: "domestic",
+          image: "liveInHousekeeper",
         },
         {
           title: "Housekeepers",
@@ -470,7 +476,7 @@ export const siteCopy = {
             "Referencias para casas",
           ],
           href: "/services#domestic-household-staffing",
-          image: "domestic",
+          image: "housekeeper",
         },
         {
           title: "Nineras & Housekeeper/Nannies",
@@ -482,7 +488,7 @@ export const siteCopy = {
             "Ayudantes de mama",
           ],
           href: "/services#domestic-household-staffing",
-          image: "domestic",
+          image: "nanny",
         },
       ],
       process: {
