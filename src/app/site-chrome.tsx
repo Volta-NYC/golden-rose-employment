@@ -109,14 +109,27 @@ export function SiteFooter() {
             >
               Facebook
             </a>
-            <a href={dcwpLinks.jobHunters} rel="noreferrer" target="_blank">
-              DCWP Job Hunter Rights
+            <a
+              href="https://www.instagram.com/agenciadeempleosnyc/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Instagram
             </a>
-            <a href="/contact">{copy.nav.contact}</a>
+            <a
+              href="https://www.tiktok.com/@agenciadeempleosnyc"
+              rel="noreferrer"
+              target="_blank"
+            >
+              TikTok
+            </a>
           </div>
         </div>
         <div className="footer-bottom">
           <span>{copy.footer.rights}</span>
+          <a href={dcwpLinks.jobHunters} rel="noreferrer" target="_blank">
+            DCWP Job Hunter Rights
+          </a>
           <a
             className="volta-credit"
             href="https://voltanyc.org/"
