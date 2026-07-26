@@ -712,6 +712,60 @@ li::before {
   color: rgba(255, 255, 255, 0.86);
 }
 
+.community-programs {
+  display: grid;
+  gap: 18px;
+  padding-bottom: 34px;
+}
+
+.community-program {
+  background:
+    linear-gradient(135deg, rgba(125, 33, 56, 0.2), transparent 42%),
+    rgba(7, 4, 5, 0.84);
+  border: 1px solid var(--line);
+  border-left: 8px solid var(--blue);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(280px, 1fr);
+  padding: 28px;
+}
+
+.community-program p {
+  margin-bottom: 0;
+}
+
+.community-support {
+  padding-top: 34px;
+}
+
+.community-support .service-card {
+  min-height: 100%;
+}
+
+.community-immigrant {
+  align-items: start;
+  background: var(--black-deep);
+  display: grid;
+  gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+  max-width: none;
+  padding-left: max(clamp(18px, 5vw, 42px), calc((100vw - 1180px) / 2 + 42px));
+  padding-right: max(clamp(18px, 5vw, 42px), calc((100vw - 1180px) / 2 + 42px));
+}
+
+.community-immigrant-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.community-immigrant-copy p {
+  margin: 0;
+}
+
+.community-photo-note {
+  padding-top: 34px;
+}
+
 .testimonial-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1476,6 +1530,8 @@ form p {
   .split,
   .community,
   .contact,
+  .community-immigrant,
+  .community-program,
   .bilingual,
   .contact-layout,
   .intake-grid,

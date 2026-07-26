@@ -13,6 +13,8 @@ const revealSelector = [
   ".section h2",
   ".section p",
   ".split > *",
+  ".community-program",
+  ".community-immigrant > *",
   ".process-grid article",
   ".process-actions .button",
   ".preview-card",

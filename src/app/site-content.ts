@@ -269,14 +269,91 @@ export const siteCopy = {
     },
     community: {
       eyebrow: "Community",
-      title: "More than employment referrals.",
-      text: "Golden Rose is growing as a community resource, helping people connect with nonprofit organizations, workforce development programs, small business resources, and services that improve quality of life.",
+      title: "Community work, workforce development, and sustainability.",
+      text: "Golden Rose Employment Agency is deeply committed to serving New York City beyond employment services. Our community work includes neighborhood beautification, workforce development, small business education, sustainability, and support for immigrant communities.",
+      resourceTitle: "Community Resource",
       initiatives: [
         "Selected for Brooklyn Botanic Garden's Greenest Block in Brooklyn initiative",
         "Growing social media through NYC Small Business Solutions and nonprofit marketing classes",
         "Participating in an intensive AI program for small businesses",
         "Modernizing marketing, automation, digital presence, and client service",
       ],
+      programs: [
+        {
+          title: "Greenest Block in Brooklyn",
+          summary:
+            "Golden Rose participates in the Greenest Block in Brooklyn initiative as part of our commitment to keeping the neighborhood welcoming, cared for, and connected.",
+          items: [
+            "Beautifying our neighborhood",
+            "Sustainability",
+            "Urban gardening",
+            "Recycling and reuse",
+            "Creating a welcoming environment for the community",
+          ],
+        },
+        {
+          title: "NYC Small Business Solutions",
+          summary:
+            "Golden Rose regularly participates in educational programs through NYC Small Business Services (SBS) to strengthen our operations and community impact.",
+          items: [
+            "Business growth",
+            "Marketing",
+            "Government contracting",
+            "MWBE certification",
+            "Financial management",
+            "Technology",
+            "AI",
+            "Leadership",
+            "Entrepreneurship",
+          ],
+        },
+        {
+          title: "AI Small Business Program",
+          summary:
+            "Golden Rose Employment Agency was selected as one of 25 small businesses across New York City for the Hispanic Federation x Pursuit Small Business AI Initiative. After completing the first phase, we were selected among 10 businesses to work one-on-one with an AI engineer on practical AI solutions.",
+          items: [
+            "Improving candidate matching",
+            "Improving communication",
+            "Strengthening business operations",
+            "Improving customer service",
+          ],
+        },
+      ],
+      aiSupportTitle: "Initiative support",
+      aiSupporters: [
+        "Hispanic Federation",
+        "Pursuit",
+        "Google",
+        "Amazon",
+        "JFF",
+        "New York City Council",
+      ],
+      organizationsTitle: "Community organizations & workforce programs",
+      organizationsText:
+        "Golden Rose actively collaborates with and participates in programs offered by organizations across New York City's small business, workforce development, entrepreneurship, and community-service ecosystem.",
+      organizations: [
+        "NYC Small Business Services (SBS)",
+        "Hispanic Federation",
+        "Pursuit",
+        "Brooklyn Public Library (PowerUP)",
+        "Brooklyn Chamber of Commerce",
+        "SCORE",
+        "Pace University Small Business Development Center",
+        "WE NYC",
+        "Start Small Think Big",
+        "Legal services providers supporting small businesses",
+        "Workforce development and entrepreneurship initiatives throughout New York City",
+      ],
+      immigrantTitle: "Supporting immigrant communities",
+      immigrantText: [
+        "Golden Rose Employment Agency has proudly served New York City's diverse immigrant communities for many years.",
+        "Our mission is to connect qualified job seekers with employers while treating every individual with dignity, professionalism, and respect.",
+        "We proudly serve people from many backgrounds and cultures, helping individuals build careers, support their families, and contribute to New York City's workforce.",
+        "We believe employment creates opportunity, independence, and stronger communities, and we are committed to making quality employment services accessible to everyone.",
+      ],
+      photoTitle: "Community in action",
+      photoText:
+        "This page can feature photos from community events, educational workshops, the AI program, sustainability initiatives, flowers, plants, and neighborhood activities as they are provided.",
     },
     contact: {
       eyebrow: "Contact Us",
@@ -560,14 +637,91 @@ export const siteCopy = {
     },
     community: {
       eyebrow: "Comunidad",
-      title: "Mas que referencias de empleo.",
-      text: "Golden Rose tambien es un recurso comunitario que ayuda a conectar personas con organizaciones sin fines de lucro, programas de desarrollo laboral, recursos para pequenos negocios y servicios que mejoran la calidad de vida.",
+      title: "Trabajo comunitario, desarrollo laboral y sostenibilidad.",
+      text: "Golden Rose Employment Agency esta profundamente comprometida con servir a la comunidad de la Ciudad de Nueva York mas alla de los servicios de empleo. Nuestro trabajo comunitario incluye embellecimiento del vecindario, desarrollo laboral, educacion para pequenos negocios, sostenibilidad y apoyo a comunidades inmigrantes.",
+      resourceTitle: "Recurso Comunitario",
       initiatives: [
         "Seleccionados para Greenest Block in Brooklyn de Brooklyn Botanic Garden",
         "Creciendo en redes sociales mediante NYC Small Business Solutions y clases de mercadeo",
         "Participando en un programa intensivo de inteligencia artificial para pequenos negocios",
         "Modernizando mercadeo, automatizacion, presencia digital y servicio al cliente",
       ],
+      programs: [
+        {
+          title: "Greenest Block in Brooklyn",
+          summary:
+            "Golden Rose participa en la iniciativa Greenest Block in Brooklyn como parte de nuestro compromiso de mantener el vecindario acogedor, cuidado y conectado.",
+          items: [
+            "Embellecer nuestro vecindario",
+            "Sostenibilidad",
+            "Jardineria urbana",
+            "Reciclaje y reutilizacion",
+            "Crear un ambiente acogedor para la comunidad",
+          ],
+        },
+        {
+          title: "NYC Small Business Solutions",
+          summary:
+            "Golden Rose participa regularmente en programas educativos de NYC Small Business Services (SBS) para fortalecer nuestras operaciones e impacto comunitario.",
+          items: [
+            "Crecimiento del negocio",
+            "Marketing",
+            "Contratacion gubernamental",
+            "Certificacion MWBE",
+            "Manejo financiero",
+            "Tecnologia",
+            "AI",
+            "Liderazgo",
+            "Emprendimiento",
+          ],
+        },
+        {
+          title: "Programa de AI para pequenos negocios",
+          summary:
+            "Golden Rose Employment Agency fue seleccionada como uno de 25 pequenos negocios en toda la Ciudad de Nueva York para la iniciativa Hispanic Federation x Pursuit Small Business AI Initiative. Despues de completar la primera fase, fuimos seleccionados entre 10 negocios para trabajar uno-a-uno con un ingeniero de AI en soluciones practicas.",
+          items: [
+            "Mejorar la seleccion de candidatos",
+            "Mejorar la comunicacion",
+            "Fortalecer las operaciones del negocio",
+            "Mejorar el servicio al cliente",
+          ],
+        },
+      ],
+      aiSupportTitle: "Apoyo de la iniciativa",
+      aiSupporters: [
+        "Hispanic Federation",
+        "Pursuit",
+        "Google",
+        "Amazon",
+        "JFF",
+        "New York City Council",
+      ],
+      organizationsTitle: "Organizaciones comunitarias y programas laborales",
+      organizationsText:
+        "Golden Rose colabora activamente y participa en programas ofrecidos por organizaciones del ecosistema de pequenos negocios, desarrollo laboral, emprendimiento y servicios comunitarios en la Ciudad de Nueva York.",
+      organizations: [
+        "NYC Small Business Services (SBS)",
+        "Hispanic Federation",
+        "Pursuit",
+        "Brooklyn Public Library (PowerUP)",
+        "Brooklyn Chamber of Commerce",
+        "SCORE",
+        "Pace University Small Business Development Center",
+        "WE NYC",
+        "Start Small Think Big",
+        "Proveedores de servicios legales que apoyan pequenos negocios",
+        "Iniciativas de desarrollo laboral y emprendimiento en toda la Ciudad de Nueva York",
+      ],
+      immigrantTitle: "Apoyo a comunidades inmigrantes",
+      immigrantText: [
+        "Golden Rose Employment Agency ha servido con orgullo a las diversas comunidades inmigrantes de la Ciudad de Nueva York por muchos anos.",
+        "Nuestra mision es conectar trabajadores calificados con empleadores mientras tratamos a cada persona con dignidad, profesionalismo y respeto.",
+        "Servimos con orgullo a personas de muchos origenes y culturas, ayudando a individuos a construir carreras, apoyar a sus familias y contribuir a la fuerza laboral de Nueva York.",
+        "Creemos que el empleo crea oportunidad, independencia y comunidades mas fuertes, y estamos comprometidos a hacer que servicios de empleo de calidad sean accesibles para todos.",
+      ],
+      photoTitle: "Comunidad en accion",
+      photoText:
+        "Esta pagina puede incluir fotos de eventos comunitarios, talleres educativos, el programa de AI, iniciativas de sostenibilidad, flores, plantas y actividades del vecindario cuando esten disponibles.",
     },
     contact: {
       eyebrow: "Contacto",
