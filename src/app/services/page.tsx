@@ -1,24 +1,27 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import { PapelPicado, Photo } from "../image-slot";
 import { useLanguage } from "../language-context";
-import { placeholderImages } from "../site-content";
+import { photos } from "../site-content";
+
+/* Only the commercial/food group has a photo that honestly represents it. The
+   domestic and general-labour groups stay as empty slots until she sends real
+   placement photography. */
+const groupPhotos: Record<string, { alt: string; src: string } | undefined> = {
+  restaurant: {
+    alt: "Cacao pods, chocolate and bottles laid out on a table",
+    src: photos.food,
+  },
+};
 
 export default function ServicesPage() {
   const { copy } = useLanguage();
 
   return (
     <main>
-      <section
-        className="page-hero image-page-hero"
-        style={
-          {
-            "--page-hero-image": `url("${placeholderImages.domestic}")`,
-          } as CSSProperties
-        }
-      >
+      <section className="page-hero image-page-hero">
+        <PapelPicado />
         <p className="eyebrow">{copy.services.eyebrow}</p>
         <h1>{copy.services.title}</h1>
         <p className="lede">{copy.services.text}</p>
@@ -46,9 +49,9 @@ export default function ServicesPage() {
       <section className="section service-page-grid" aria-label="Service overview">
         {copy.services.groups.map((group) => (
           <a className="service-detail" href={`#${group.id}`} key={group.title}>
-            <img
-              alt=""
-              src={placeholderImages[group.image as keyof typeof placeholderImages]}
+            <Photo
+              alt={groupPhotos[group.image]?.alt ?? ""}
+              src={groupPhotos[group.image]?.src}
             />
             <div>
               <h2>{group.title}</h2>

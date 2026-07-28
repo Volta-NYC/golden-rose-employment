@@ -2,20 +2,17 @@
 
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import { ImageSlot, PapelPicado } from "./image-slot";
 import { useLanguage } from "./language-context";
-import { logoImage, oldHeroImage, placeholderImages } from "./site-content";
+import { logoLockup } from "./site-content";
 
 export default function Home() {
   const { copy } = useLanguage();
 
   return (
     <main>
-      <section
-        className="hero"
-        id="top"
-        style={{ "--hero-image": `url("${oldHeroImage}")` } as CSSProperties}
-      >
+      <section className="hero" id="top">
+        <PapelPicado />
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">{copy.home.eyebrow}</p>
@@ -47,7 +44,11 @@ export default function Home() {
 
           <aside className="hero-panel" aria-label="Golden Rose highlights">
             <div className="rose-card">
-              <img alt="" className="hero-logo" src={logoImage} />
+              <img
+                alt="Golden Rose Agencia de Empleos NYC"
+                className="hero-logo"
+                src={logoLockup}
+              />
               <h2>{copy.home.appointmentTitle}</h2>
               <p>{copy.home.appointmentText}</p>
             </div>
@@ -86,10 +87,7 @@ export default function Home() {
         <div className="preview-grid">
           {copy.home.cards.map((card) => (
             <Link className="preview-card" href={card.href} key={card.title}>
-              <img
-                alt=""
-                src={placeholderImages[card.image as keyof typeof placeholderImages]}
-              />
+              <ImageSlot />
               <span>{card.title}</span>
               <ul className="preview-list">
                 {card.items.map((item) => (

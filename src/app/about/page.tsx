@@ -1,24 +1,17 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import { PapelPicado, Photo } from "../image-slot";
 import { useLanguage } from "../language-context";
-import { placeholderImages } from "../site-content";
+import { photos } from "../site-content";
 
 export default function AboutPage() {
   const { copy } = useLanguage();
 
   return (
     <main>
-      <section
-        className="page-hero image-page-hero"
-        style={
-          {
-            "--page-hero-image": `url("${placeholderImages.about}")`,
-          } as CSSProperties
-        }
-      >
+      <section className="page-hero image-page-hero">
+        <PapelPicado />
         <p className="eyebrow">{copy.about.eyebrow}</p>
         <h1>{copy.about.title}</h1>
         <p className="lede">{copy.about.text}</p>
@@ -33,7 +26,11 @@ export default function AboutPage() {
       </section>
       <section className="section split">
         <div className="image-panel">
-          <img alt="" src={placeholderImages.community} />
+          <Photo
+            alt="The Golden Rose office in Brooklyn, with the job posting board by the desk"
+            objectPosition="70% center"
+            src={photos.office}
+          />
         </div>
         <div className="service-card">
           <h2>Golden Rose</h2>

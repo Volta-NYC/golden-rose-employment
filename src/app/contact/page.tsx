@@ -1,27 +1,20 @@
 "use client";
 
-import type { CSSProperties } from "react";
 import {
   ApplicantIntakeForm,
   EmployerRequestForm,
   intakeFormTitles,
 } from "../contact-form";
+import { PapelPicado } from "../image-slot";
 import { useLanguage } from "../language-context";
-import { placeholderImages } from "../site-content";
 
 export default function ContactPage() {
   const { copy, language } = useLanguage();
 
   return (
     <main>
-      <section
-        className="page-hero image-page-hero contact-page-hero"
-        style={
-          {
-            "--page-hero-image": `url("${placeholderImages.domestic}")`,
-          } as CSSProperties
-        }
-      >
+      <section className="page-hero image-page-hero contact-page-hero">
+        <PapelPicado />
         <p className="eyebrow">{copy.contact.eyebrow}</p>
         <h1>{copy.contact.title}</h1>
         <p className="lede">{copy.contact.text}</p>

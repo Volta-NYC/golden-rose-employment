@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   icons: {
-    icon: "/golden-rose-logo.jpg",
-    shortcut: "/golden-rose-logo.jpg",
-    apple: "/golden-rose-logo.jpg",
+    icon: "/brand/mark.png",
+    shortcut: "/brand/mark.png",
+    apple: "/brand/mark.png",
   },
 };
 

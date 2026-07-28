@@ -1,28 +1,24 @@
 export type Language = "en" | "es";
 
-export const oldHeroImage =
-  "https://img1.wsimg.com/isteam/stock/naxm9Al/:/rs=w:1920,h:1080,cg:true,m/cr=w:1920,h:1080,a:cc";
-
-export const placeholderImages = {
-  about:
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&fm=jpg&q=80&w=1400",
-  domestic:
-    "https://images.unsplash.com/photo-1758273705723-26ef454252ce?auto=format&fit=crop&fm=jpg&q=80&w=1400",
-  liveInHousekeeper:
-    "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&fm=jpg&q=80&w=1400",
-  housekeeper:
-    "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&fm=jpg&q=80&w=1400",
-  nanny:
-    "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&fm=jpg&q=80&w=1400",
-  restaurant:
-    "https://images.unsplash.com/photo-1776142519748-2b897acaecd7?auto=format&fit=crop&fm=jpg&q=80&w=1400",
-  labor:
-    "https://images.unsplash.com/photo-1772300164438-f73307d3b645?auto=format&fit=crop&fm=jpg&q=80&w=1400",
-  community:
-    "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&fm=jpg&q=80&w=1400",
+/* The client's own photos, selected from the 30 she sent. Most of that set is
+   colour reference (Andean textiles, Peru landscapes, craft markets) rather than
+   usable site imagery, and several frames show identifiable people who have not
+   agreed to appear here -- those were left out deliberately. Positions with no
+   honest photo still render <ImageSlot />; the `image` keys on each card below
+   record which subject belongs where once her real staffing photos arrive. */
+export const photos = {
+  office: "/photos/office.jpg",
+  flowerStand: "/photos/flower-stand.jpg",
+  flowerMarket: "/photos/flower-market.jpg",
+  food: "/photos/food.jpg",
+  textile: "/photos/textile.jpg",
 };
 
-export const logoImage = "/golden-rose-logo.jpg";
+/* Two lockups, both transparent PNGs. The mark alone works on cream and on the
+   charcoal footer; the full lockup carries a charcoal wordmark and is therefore
+   light-background only. */
+export const logoImage = "/brand/mark.png";
+export const logoLockup = "/brand/lockup.png";
 
 export const dcwpLinks = {
   employmentAgencies:

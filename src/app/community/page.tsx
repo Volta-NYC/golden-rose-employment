@@ -1,24 +1,17 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import { PapelPicado, Photo, TextileBand } from "../image-slot";
 import { useLanguage } from "../language-context";
-import { placeholderImages } from "../site-content";
+import { photos } from "../site-content";
 
 export default function CommunityPage() {
   const { copy } = useLanguage();
 
   return (
     <main>
-      <section
-        className="page-hero image-page-hero"
-        style={
-          {
-            "--page-hero-image": `url("${placeholderImages.community}")`,
-          } as CSSProperties
-        }
-      >
+      <section className="page-hero image-page-hero">
+        <PapelPicado />
         <p className="eyebrow">{copy.community.eyebrow}</p>
         <h1>{copy.community.title}</h1>
         <p className="lede">{copy.community.text}</p>
@@ -42,9 +35,13 @@ export default function CommunityPage() {
           </ul>
         </div>
         <div className="image-panel">
-          <img alt="" src={placeholderImages.community} />
+          <Photo
+            alt="A neighbourhood flower stand, part of the block beautification work"
+            src={photos.flowerStand}
+          />
         </div>
       </section>
+      <TextileBand src={photos.textile} />
       <section className="section community-programs" aria-label="Community programs">
         {copy.community.programs.map((program) => (
           <article className="community-program" key={program.title}>
@@ -93,7 +90,10 @@ export default function CommunityPage() {
       </section>
       <section className="section split community-photo-note">
         <div className="image-panel">
-          <img alt="" src={placeholderImages.domestic} />
+          <Photo
+            alt="Buckets of cut flowers on a market table"
+            src={photos.flowerMarket}
+          />
         </div>
         <div className="initiative-card">
           <span>{copy.community.eyebrow}</span>
