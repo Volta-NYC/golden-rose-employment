@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "./language-context";
 import { ScrollReveal } from "./scroll-reveal";
 import { SiteFooter, SiteHeader } from "./site-chrome";
@@ -49,6 +50,7 @@ export default function RootLayout({
           {children}
           <SiteFooter />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
