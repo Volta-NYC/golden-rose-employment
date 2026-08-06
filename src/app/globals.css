@@ -1444,12 +1444,16 @@ form p {
 }
 
 .volta-credit {
-  color: var(--mustard);
+  color: #F6B78D;
   font-weight: 900;
   margin-left: auto;
   text-align: right;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.volta-credit:hover {
+  color: #F6B78D;
 }
 
 .mobile-contact-bar {

@@ -46,7 +46,7 @@ export const siteCopy = {
       license: "NYC DCWP License No. 2032912-DCA",
       phone: "347-350-9660",
       rights: "Copyright (c) 2026 Agencia de Empleos NYC - All Rights Reserved.",
-      madeBy: "Made by Volta",
+      madeBy: "Made by Novus",
     },
     home: {
       eyebrow: "Bienvenidos / Welcome",
@@ -414,7 +414,7 @@ export const siteCopy = {
       license: "NYC DCWP License No. 2032912-DCA",
       phone: "347-350-9660",
       rights: "Copyright (c) 2026 Agencia de Empleos NYC - Todos los derechos reservados.",
-      madeBy: "Hecho por Volta",
+      madeBy: "Hecho por Novus",
     },
     home: {
       eyebrow: "Bienvenidos / Welcome",

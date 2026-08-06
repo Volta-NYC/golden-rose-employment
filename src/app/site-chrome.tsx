@@ -132,7 +132,7 @@ export function SiteFooter() {
           </a>
           <a
             className="volta-credit"
-            href="https://voltanyc.org/"
+            href="https://www.novusnyc.org/"
             rel="noreferrer"
             target="_blank"
           >
