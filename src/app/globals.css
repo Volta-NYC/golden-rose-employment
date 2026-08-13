@@ -418,6 +418,13 @@ footer span {
   transform: translateY(-2px);
 }
 
+.audience-path:focus-visible,
+.preview-card:focus-visible,
+.service-detail:focus-visible {
+  border-color: var(--blue-light);
+  box-shadow: 0 0 0 4px rgba(255, 212, 107, 0.24);
+}
+
 .audience-path span,
 .audience-path strong {
   color: var(--terracotta-deep);
@@ -1256,6 +1263,13 @@ select:focus,
 textarea:focus {
   border-color: var(--terracotta-deep);
   outline: 2px solid rgba(217, 162, 27, 0.24);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--blue-light);
+  outline-offset: 4px;
 }
 
 textarea {
