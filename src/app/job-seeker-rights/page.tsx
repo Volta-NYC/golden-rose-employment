@@ -8,7 +8,7 @@ export default function JobSeekerRightsPage() {
   const { copy } = useLanguage();
 
   return (
-    <main>
+    <main id="main-content">
       <section className="page-hero rights-hero">
         <p className="eyebrow">{copy.rights.eyebrow}</p>
         <h1>{copy.rights.title}</h1>
@@ -21,6 +21,7 @@ export default function JobSeekerRightsPage() {
             target="_blank"
           >
             {copy.rights.englishPdf}
+            <span className="sr-only">, opens in a new tab</span>
           </a>
           <a
             className="button secondary"
@@ -29,6 +30,7 @@ export default function JobSeekerRightsPage() {
             target="_blank"
           >
             {copy.rights.spanishPdf}
+            <span className="sr-only">, opens in a new tab</span>
           </a>
         </div>
       </section>
@@ -38,6 +40,7 @@ export default function JobSeekerRightsPage() {
           <span>{copy.rights.sourceLabel}</span>
           <a href={dcwpLinks.employmentAgencies} rel="noreferrer" target="_blank">
             nyc.gov/site/dca/businesses/info-employment-agencies.page
+            <span className="sr-only">, opens in a new tab</span>
           </a>
         </div>
         <div className="rights-grid">

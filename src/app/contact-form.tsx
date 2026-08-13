@@ -118,33 +118,55 @@ export function EmployerRequestForm({ language }: IntakeFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form aria-describedby="employer-request-note" onSubmit={handleSubmit}>
       <label>
         {copy.labels.name}
-        <input name="name" type="text" placeholder={copy.placeholders.name} />
+        <input
+          autoComplete="name"
+          name="name"
+          placeholder={copy.placeholders.name}
+          required
+          type="text"
+        />
       </label>
       <label>
         {copy.labels.contact}
-        <input name="contact" type="text" placeholder={copy.placeholders.contact} />
+        <input
+          autoComplete="tel"
+          name="contact"
+          placeholder={copy.placeholders.contact}
+          required
+          type="text"
+        />
       </label>
       <label>
         {copy.labels.role}
-        <input name="role" type="text" placeholder={copy.placeholders.role} />
+        <input
+          name="role"
+          placeholder={copy.placeholders.role}
+          required
+          type="text"
+        />
       </label>
       <label>
         {copy.labels.schedule}
         <input
           name="schedule"
-          type="text"
           placeholder={copy.placeholders.schedule}
+          required
+          type="text"
         />
       </label>
       <label>
         {copy.labels.details}
-        <textarea name="details" placeholder={copy.placeholders.details} rows={4} />
+        <textarea
+          name="details"
+          placeholder={copy.placeholders.details}
+          rows={4}
+        />
       </label>
       <button type="submit">{copy.button}</button>
-      <p>{formCopy[language].note}</p>
+      <p id="employer-request-note">{formCopy[language].note}</p>
     </form>
   );
 }
@@ -167,18 +189,35 @@ export function ApplicantIntakeForm({ language }: IntakeFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form aria-describedby="applicant-intake-note" onSubmit={handleSubmit}>
       <label>
         {copy.labels.name}
-        <input name="name" type="text" placeholder={copy.placeholders.name} />
+        <input
+          autoComplete="name"
+          name="name"
+          placeholder={copy.placeholders.name}
+          required
+          type="text"
+        />
       </label>
       <label>
         {copy.labels.contact}
-        <input name="contact" type="text" placeholder={copy.placeholders.contact} />
+        <input
+          autoComplete="tel"
+          name="contact"
+          placeholder={copy.placeholders.contact}
+          required
+          type="text"
+        />
       </label>
       <label>
         {copy.labels.work}
-        <input name="work" type="text" placeholder={copy.placeholders.work} />
+        <input
+          name="work"
+          placeholder={copy.placeholders.work}
+          required
+          type="text"
+        />
       </label>
       <label>
         {copy.labels.experience}
@@ -197,7 +236,7 @@ export function ApplicantIntakeForm({ language }: IntakeFormProps) {
         />
       </label>
       <button type="submit">{copy.button}</button>
-      <p>{formCopy[language].note}</p>
+      <p id="applicant-intake-note">{formCopy[language].note}</p>
     </form>
   );
 }

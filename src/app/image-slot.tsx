@@ -35,7 +35,7 @@ export function Photo({
   src?: string;
 }) {
   if (!src) {
-    return <ImageSlot className={className} />;
+    return <ImageSlot className={className} label={alt || "Image goes here"} />;
   }
 
   return (

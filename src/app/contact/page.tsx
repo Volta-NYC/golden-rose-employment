@@ -12,7 +12,7 @@ export default function ContactPage() {
   const { copy, language } = useLanguage();
 
   return (
-    <main>
+    <main id="main-content">
       <section className="page-hero image-page-hero contact-page-hero">
         <PapelPicado />
         <p className="eyebrow">{copy.contact.eyebrow}</p>
@@ -29,6 +29,7 @@ export default function ContactPage() {
             target="_blank"
           >
             WhatsApp
+            <span className="sr-only">, opens in a new tab</span>
           </a>
         </div>
       </section>
@@ -67,6 +68,7 @@ export default function ContactPage() {
             target="_blank"
           >
             WhatsApp
+            <span className="sr-only">, opens in a new tab</span>
           </a>
         </div>
       </section>

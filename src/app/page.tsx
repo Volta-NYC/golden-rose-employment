@@ -10,7 +10,7 @@ export default function Home() {
   const { copy } = useLanguage();
 
   return (
-    <main>
+    <main id="main-content">
       <section className="hero" id="top">
         <PapelPicado />
         <div className="hero-grid">
@@ -136,6 +136,7 @@ export default function Home() {
             target="_blank"
           >
             WhatsApp
+            <span className="sr-only">, opens in a new tab</span>
           </a>
         </div>
       </section>

@@ -9,7 +9,7 @@ export default function CommunityPage() {
   const { copy } = useLanguage();
 
   return (
-    <main>
+    <main id="main-content">
       <section className="page-hero image-page-hero">
         <PapelPicado />
         <p className="eyebrow">{copy.community.eyebrow}</p>

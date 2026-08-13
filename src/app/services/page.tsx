@@ -19,7 +19,7 @@ export default function ServicesPage() {
   const { copy } = useLanguage();
 
   return (
-    <main>
+    <main id="main-content">
       <section className="page-hero image-page-hero">
         <PapelPicado />
         <p className="eyebrow">{copy.services.eyebrow}</p>
@@ -50,7 +50,7 @@ export default function ServicesPage() {
         {copy.services.groups.map((group) => (
           <a className="service-detail" href={`#${group.id}`} key={group.title}>
             <Photo
-              alt={groupPhotos[group.image]?.alt ?? ""}
+              alt={groupPhotos[group.image]?.alt ?? `${group.title} image placeholder`}
               src={groupPhotos[group.image]?.src}
             />
             <div>
