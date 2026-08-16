@@ -486,6 +486,12 @@ form button:hover,
   transform: translateY(-2px);
 }
 
+form button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+  transform: none;
+}
+
 .language-toggle {
   min-height: auto;
   padding: 9px 12px;
@@ -1281,6 +1287,38 @@ form p {
   font-size: 0.88rem;
   line-height: 1.5;
   margin-bottom: 0;
+}
+
+.form-status {
+  border-left: 4px solid var(--terracotta);
+  margin: 0;
+  padding: 12px 14px;
+}
+
+.form-status.success {
+  background: rgba(72, 91, 60, 0.12);
+  border-left-color: var(--olive);
+  color: var(--olive);
+  font-weight: 900;
+}
+
+.form-status.error {
+  background: rgba(184, 92, 56, 0.12);
+  color: var(--terracotta-deep);
+}
+
+.form-status.error p {
+  color: var(--terracotta-deep);
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+.form-status ul {
+  color: var(--ink-soft);
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .site-footer {

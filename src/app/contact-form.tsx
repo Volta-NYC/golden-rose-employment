@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import { Language } from "./site-content";
 
 const formCopy = {
@@ -22,7 +22,8 @@ const formCopy = {
         details: "Location, experience needed, start date, language, pay range.",
       },
       button: "Request workers",
-      intro: "Hello Golden Rose, I am an employer requesting workers.",
+      sending: "Sending...",
+      success: "Thank you. Your employer request was sent.",
     },
     applicant: {
       title: "Job seeker details",
@@ -41,9 +42,13 @@ const formCopy = {
         availability: "Days, hours, live-in/live-out, start date.",
       },
       button: "Send work details",
-      intro: "Hello Golden Rose, I am looking for work.",
+      sending: "Sending...",
+      success: "Thank you. Your job seeker details were sent.",
     },
-    note: "Messages open in WhatsApp so Golden Rose can receive the details quickly.",
+    note: "Your details are sent securely to Golden Rose.",
+    formError: "Please fix the highlighted fields and try again.",
+    requiredSuffix: "is required.",
+    submitError: "We could not send your request right now. Please try again.",
   },
   es: {
     employer: {
@@ -63,7 +68,8 @@ const formCopy = {
         details: "Ubicacion, experiencia necesaria, fecha, idioma, pago.",
       },
       button: "Solicitar trabajadores",
-      intro: "Hola Golden Rose, soy empleador y necesito trabajadores.",
+      sending: "Enviando...",
+      success: "Gracias. Su solicitud de empleador fue enviada.",
     },
     applicant: {
       title: "Datos para buscar empleo",
@@ -82,9 +88,13 @@ const formCopy = {
         availability: "Dias, horas, interna/entrada por salida, fecha.",
       },
       button: "Enviar datos",
-      intro: "Hola Golden Rose, estoy buscando empleo.",
+      sending: "Enviando...",
+      success: "Gracias. Sus datos fueron enviados.",
     },
-    note: "Los mensajes se abren en WhatsApp para que Golden Rose reciba los detalles rapidamente.",
+    note: "Sus datos se envian de forma segura a Golden Rose.",
+    formError: "Corrija los campos marcados e intente de nuevo.",
+    requiredSuffix: "es obligatorio.",
+    submitError: "No pudimos enviar su solicitud ahora. Intente de nuevo.",
   },
 };
 
@@ -92,29 +102,82 @@ type IntakeFormProps = {
   language: Language;
 };
 
-function openWhatsApp(lines: string[]) {
-  window.open(
-    `https://wa.me/13473509660?text=${encodeURIComponent(lines.join("\n"))}`,
-    "_blank",
-    "noopener,noreferrer",
-  );
+type SubmitState = {
+  status: "idle" | "sending" | "success" | "error";
+  errors: string[];
+};
+
+function getValue(form: FormData, key: string) {
+  const value = form.get(key);
+  return typeof value === "string" ? value.trim() : "";
+}
+
+async function sendContactRequest(payload: Record<string, string>) {
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = (await response.json().catch(() => null)) as {
+    errors?: string[];
+  } | null;
+
+  if (!response.ok) {
+    throw new Error(data?.errors?.join("\n") || "Submission failed.");
+  }
 }
 
 export function EmployerRequestForm({ language }: IntakeFormProps) {
   const copy = formCopy[language].employer;
+  const [submitState, setSubmitState] = useState<SubmitState>({
+    status: "idle",
+    errors: [],
+  });
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = new FormData(event.currentTarget);
-    openWhatsApp([
-      copy.intro,
-      `${copy.labels.name}: ${form.get("name") || "Not provided"}`,
-      `${copy.labels.contact}: ${form.get("contact") || "Not provided"}`,
-      `${copy.labels.role}: ${form.get("role") || "Not provided"}`,
-      `${copy.labels.schedule}: ${form.get("schedule") || "Not provided"}`,
-      `${copy.labels.details}: ${form.get("details") || "Not provided"}`,
-    ]);
+    const payload = {
+      formType: "employer",
+      name: getValue(form, "name"),
+      contact: getValue(form, "contact"),
+      role: getValue(form, "role"),
+      schedule: getValue(form, "schedule"),
+      details: getValue(form, "details"),
+    };
+
+    const missingFields = [
+      [copy.labels.name, payload.name],
+      [copy.labels.contact, payload.contact],
+      [copy.labels.role, payload.role],
+      [copy.labels.schedule, payload.schedule],
+    ]
+      .filter(([, value]) => !value)
+      .map(([label]) => `${label} ${formCopy[language].requiredSuffix}`);
+
+    if (missingFields.length > 0) {
+      setSubmitState({ status: "error", errors: missingFields });
+      return;
+    }
+
+    setSubmitState({ status: "sending", errors: [] });
+
+    try {
+      await sendContactRequest(payload);
+      event.currentTarget.reset();
+      setSubmitState({ status: "success", errors: [] });
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : formCopy[language].submitError;
+      setSubmitState({
+        status: "error",
+        errors: message.split("\n").filter(Boolean),
+      });
+    }
   }
 
   return (
@@ -165,7 +228,15 @@ export function EmployerRequestForm({ language }: IntakeFormProps) {
           rows={4}
         />
       </label>
-      <button type="submit">{copy.button}</button>
+      <button disabled={submitState.status === "sending"} type="submit">
+        {submitState.status === "sending" ? copy.sending : copy.button}
+      </button>
+      <FormStatus
+        errors={submitState.errors}
+        fallbackError={formCopy[language].formError}
+        status={submitState.status}
+        success={copy.success}
+      />
       <p id="employer-request-note">{formCopy[language].note}</p>
     </form>
   );
@@ -173,19 +244,51 @@ export function EmployerRequestForm({ language }: IntakeFormProps) {
 
 export function ApplicantIntakeForm({ language }: IntakeFormProps) {
   const copy = formCopy[language].applicant;
+  const [submitState, setSubmitState] = useState<SubmitState>({
+    status: "idle",
+    errors: [],
+  });
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = new FormData(event.currentTarget);
-    openWhatsApp([
-      copy.intro,
-      `${copy.labels.name}: ${form.get("name") || "Not provided"}`,
-      `${copy.labels.contact}: ${form.get("contact") || "Not provided"}`,
-      `${copy.labels.work}: ${form.get("work") || "Not provided"}`,
-      `${copy.labels.experience}: ${form.get("experience") || "Not provided"}`,
-      `${copy.labels.availability}: ${form.get("availability") || "Not provided"}`,
-    ]);
+    const payload = {
+      formType: "applicant",
+      name: getValue(form, "name"),
+      contact: getValue(form, "contact"),
+      work: getValue(form, "work"),
+      experience: getValue(form, "experience"),
+      availability: getValue(form, "availability"),
+    };
+
+    const missingFields = [
+      [copy.labels.name, payload.name],
+      [copy.labels.contact, payload.contact],
+      [copy.labels.work, payload.work],
+    ]
+      .filter(([, value]) => !value)
+      .map(([label]) => `${label} ${formCopy[language].requiredSuffix}`);
+
+    if (missingFields.length > 0) {
+      setSubmitState({ status: "error", errors: missingFields });
+      return;
+    }
+
+    setSubmitState({ status: "sending", errors: [] });
+
+    try {
+      await sendContactRequest(payload);
+      event.currentTarget.reset();
+      setSubmitState({ status: "success", errors: [] });
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : formCopy[language].submitError;
+      setSubmitState({
+        status: "error",
+        errors: message.split("\n").filter(Boolean),
+      });
+    }
   }
 
   return (
@@ -235,10 +338,55 @@ export function ApplicantIntakeForm({ language }: IntakeFormProps) {
           placeholder={copy.placeholders.availability}
         />
       </label>
-      <button type="submit">{copy.button}</button>
+      <button disabled={submitState.status === "sending"} type="submit">
+        {submitState.status === "sending" ? copy.sending : copy.button}
+      </button>
+      <FormStatus
+        errors={submitState.errors}
+        fallbackError={formCopy[language].formError}
+        status={submitState.status}
+        success={copy.success}
+      />
       <p id="applicant-intake-note">{formCopy[language].note}</p>
     </form>
   );
+}
+
+function FormStatus({
+  errors,
+  fallbackError,
+  status,
+  success,
+}: {
+  errors: string[];
+  fallbackError: string;
+  status: SubmitState["status"];
+  success: string;
+}) {
+  if (status === "success") {
+    return (
+      <p className="form-status success" role="status">
+        {success}
+      </p>
+    );
+  }
+
+  if (status === "error") {
+    return (
+      <div className="form-status error" role="alert">
+        <p>{errors.length > 0 ? fallbackError : "Submission failed."}</p>
+        {errors.length > 0 ? (
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    );
+  }
+
+  return null;
 }
 
 export const intakeFormTitles = {
