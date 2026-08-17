@@ -140,7 +140,8 @@ export function EmployerRequestForm({ language }: IntakeFormProps) {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const form = new FormData(event.currentTarget);
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
     const payload = {
       formType: "employer",
       name: getValue(form, "name"),
@@ -168,7 +169,7 @@ export function EmployerRequestForm({ language }: IntakeFormProps) {
 
     try {
       await sendContactRequest(payload);
-      event.currentTarget.reset();
+      formElement.reset();
       setSubmitState({ status: "success", errors: [] });
     } catch (error) {
       const message =
@@ -252,7 +253,8 @@ export function ApplicantIntakeForm({ language }: IntakeFormProps) {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const form = new FormData(event.currentTarget);
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
     const payload = {
       formType: "applicant",
       name: getValue(form, "name"),
@@ -279,7 +281,7 @@ export function ApplicantIntakeForm({ language }: IntakeFormProps) {
 
     try {
       await sendContactRequest(payload);
-      event.currentTarget.reset();
+      formElement.reset();
       setSubmitState({ status: "success", errors: [] });
     } catch (error) {
       const message =
